@@ -292,7 +292,6 @@ button.danger { border-color: var(--err); color: var(--err); }
   <header class="top" id="top-shoot" hidden>
     <button id="btn-back" class="icon-btn" aria-label="드레스룸으로" title="드레스룸으로">←</button>
     <p id="shoot-title" class="shoot-title"></p>
-    <button id="btn-save-top" class="icon-btn" aria-label="사진 저장" title="사진 저장">⤓</button>
   </header>
 
   <main class="layout">
@@ -358,6 +357,7 @@ button.danger { border-color: var(--err); color: var(--err); }
       <!-- 촬영 -->
       <div id="panel-shoot" class="shoot-panel" hidden>
         <div class="shoot-row"><span class="shoot-label">장소</span><div id="shoot-scenes" class="seg"></div></div>
+        <div class="shoot-row" id="shoot-variant-row" hidden><span class="shoot-label">시간</span><div id="shoot-variants" class="seg"></div></div>
         <div class="shoot-row"><span class="shoot-label">구도</span><div id="shoot-framing" class="seg"></div></div>
         <div class="shoot-row"><span class="shoot-label">위치</span><div id="shoot-pos" class="seg"></div></div>
         <button id="btn-save" class="primary big" disabled>사진 저장</button>
@@ -381,7 +381,7 @@ button.danger { border-color: var(--err); color: var(--err); }
   </div>
   <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
 
-  <script>window.DYS = window.DYS || {}; DYS.assetManifest = {"assets/bases/balance-front-neutral/r2/base.png":{"src":"assets/bases/balance-front-neutral/r2/base.webp","x":308,"y":21,"w":1024,"h":1536},"assets/bases/balance-front-neutral/r2/hair-mask.png":{"src":"assets/bases/balance-front-neutral/r2/hair-mask.webp","x":416,"y":21,"w":1024,"h":1536},"assets/bases/balance-seoul-a/r1/base.png":{"src":"assets/bases/balance-seoul-a/r1/base.webp","x":326,"y":20,"w":1024,"h":1536},"assets/bases/balance-seoul-a/r1/hair-mask.png":{"src":"assets/bases/balance-seoul-a/r1/hair-mask.webp","x":415,"y":20,"w":1024,"h":1536},"assets/items/top-tshirt-basic/balance-r2/base.png":{"src":"assets/items/top-tshirt-basic/balance-r2/base.webp","x":331,"y":292,"w":1024,"h":1536},"assets/items/top-tshirt-basic/balance-r2/mask.png":{"src":"assets/items/top-tshirt-basic/balance-r2/mask.webp","x":331,"y":293,"w":1024,"h":1536},"assets/items/top-tshirt-basic/balance-seoul-a/base.png":{"src":"assets/items/top-tshirt-basic/balance-seoul-a/base.webp","x":343,"y":284,"w":1024,"h":1536},"assets/items/top-tshirt-basic/balance-seoul-a/mask.png":{"src":"assets/items/top-tshirt-basic/balance-seoul-a/mask.webp","x":344,"y":285,"w":1024,"h":1536},"assets/items/top-blouse-basic/balance-r2/base.png":{"src":"assets/items/top-blouse-basic/balance-r2/base.webp","x":313,"y":267,"w":1024,"h":1536},"assets/items/top-blouse-basic/balance-r2/mask.png":{"src":"assets/items/top-blouse-basic/balance-r2/mask.webp","x":313,"y":268,"w":1024,"h":1536},"assets/items/top-blouse-basic/balance-seoul-a/base.png":{"src":"assets/items/top-blouse-basic/balance-seoul-a/base.webp","x":331,"y":262,"w":1024,"h":1536},"assets/items/top-blouse-basic/balance-seoul-a/mask.png":{"src":"assets/items/top-blouse-basic/balance-seoul-a/mask.webp","x":331,"y":263,"w":1024,"h":1536},"assets/items/bottom-denim-wide/balance-r2/base.png":{"src":"assets/items/bottom-denim-wide/balance-r2/base.webp","x":363,"y":564,"w":1024,"h":1536},"assets/items/bottom-denim-wide/balance-r2/mask.png":{"src":"assets/items/bottom-denim-wide/balance-r2/mask.webp","x":364,"y":565,"w":1024,"h":1536},"assets/items/bottom-denim-wide/balance-seoul-a/base.png":{"src":"assets/items/bottom-denim-wide/balance-seoul-a/base.webp","x":393,"y":545,"w":1024,"h":1536},"assets/items/bottom-denim-wide/balance-seoul-a/mask.png":{"src":"assets/items/bottom-denim-wide/balance-seoul-a/mask.webp","x":393,"y":546,"w":1024,"h":1536},"assets/items/shoes-sneaker-white/balance-r2/base.png":{"src":"assets/items/shoes-sneaker-white/balance-r2/base.webp","x":391,"y":1346,"w":1024,"h":1536},"assets/items/shoes-sneaker-white/balance-r2/mask.png":{"src":"assets/items/shoes-sneaker-white/balance-r2/mask.webp","x":392,"y":1348,"w":1024,"h":1536},"assets/items/shoes-sneaker-white/balance-seoul-a/base.png":{"src":"assets/items/shoes-sneaker-white/balance-seoul-a/base.webp","x":407,"y":1251,"w":1024,"h":1536},"assets/items/shoes-sneaker-white/balance-seoul-a/mask.png":{"src":"assets/items/shoes-sneaker-white/balance-seoul-a/mask.webp","x":407,"y":1252,"w":1024,"h":1536},"assets/items/top-shirt-white/balance-r2/base.png":{"src":"assets/items/top-shirt-white/balance-r2/base.webp","x":329,"y":262,"w":1024,"h":1536},"assets/items/top-shirt-white/balance-r2/mask.png":{"src":"assets/items/top-shirt-white/balance-r2/mask.webp","x":330,"y":263,"w":1024,"h":1536},"assets/items/top-shirt-white/balance-seoul-a/base.png":{"src":"assets/items/top-shirt-white/balance-seoul-a/base.webp","x":339,"y":257,"w":1024,"h":1536},"assets/items/top-shirt-white/balance-seoul-a/mask.png":{"src":"assets/items/top-shirt-white/balance-seoul-a/mask.webp","x":340,"y":258,"w":1024,"h":1536},"assets/items/outer-blazer/balance-r2/base.png":{"src":"assets/items/outer-blazer/balance-r2/base.webp","x":308,"y":273,"w":1024,"h":1536},"assets/items/outer-blazer/balance-r2/mask.png":{"src":"assets/items/outer-blazer/balance-r2/mask.webp","x":309,"y":274,"w":1024,"h":1536},"assets/items/outer-blazer/balance-seoul-a/base.png":{"src":"assets/items/outer-blazer/balance-seoul-a/base.webp","x":325,"y":261,"w":1024,"h":1536},"assets/items/outer-blazer/balance-seoul-a/mask.png":{"src":"assets/items/outer-blazer/balance-seoul-a/mask.webp","x":325,"y":262,"w":1024,"h":1536},"assets/items/outer-trench/balance-r2/base.png":{"src":"assets/items/outer-trench/balance-r2/base.webp","x":299,"y":265,"w":1024,"h":1536},"assets/items/outer-trench/balance-r2/mask.png":{"src":"assets/items/outer-trench/balance-r2/mask.webp","x":299,"y":266,"w":1024,"h":1536},"assets/items/outer-trench/balance-seoul-a/base.png":{"src":"assets/items/outer-trench/balance-seoul-a/base.webp","x":320,"y":254,"w":1024,"h":1536},"assets/items/outer-trench/balance-seoul-a/mask.png":{"src":"assets/items/outer-trench/balance-seoul-a/mask.webp","x":320,"y":255,"w":1024,"h":1536},"assets/items/bottom-mini-skirt/balance-r2/base.png":{"src":"assets/items/bottom-mini-skirt/balance-r2/base.webp","x":346,"y":584,"w":1024,"h":1536},"assets/items/bottom-mini-skirt/balance-r2/mask.png":{"src":"assets/items/bottom-mini-skirt/balance-r2/mask.webp","x":348,"y":586,"w":1024,"h":1536},"assets/items/bottom-mini-skirt/balance-seoul-a/base.png":{"src":"assets/items/bottom-mini-skirt/balance-seoul-a/base.webp","x":368,"y":552,"w":1024,"h":1536},"assets/items/bottom-mini-skirt/balance-seoul-a/mask.png":{"src":"assets/items/bottom-mini-skirt/balance-seoul-a/mask.webp","x":371,"y":553,"w":1024,"h":1536},"assets/items/shoes-loafer/balance-r2/base.png":{"src":"assets/items/shoes-loafer/balance-r2/base.webp","x":395,"y":1364,"w":1024,"h":1536},"assets/items/shoes-loafer/balance-r2/mask.png":{"src":"assets/items/shoes-loafer/balance-r2/mask.webp","x":395,"y":1366,"w":1024,"h":1536},"assets/items/shoes-loafer/balance-seoul-a/base.png":{"src":"assets/items/shoes-loafer/balance-seoul-a/base.webp","x":402,"y":1277,"w":1024,"h":1536},"assets/items/shoes-loafer/balance-seoul-a/mask.png":{"src":"assets/items/shoes-loafer/balance-seoul-a/mask.webp","x":403,"y":1278,"w":1024,"h":1536},"assets/items/bag-shoulder-small/balance-r2/base.png":{"src":"assets/items/bag-shoulder-small/balance-r2/base.webp","x":341,"y":304,"w":1024,"h":1536},"assets/items/bag-shoulder-small/balance-r2/mask.png":{"src":"assets/items/bag-shoulder-small/balance-r2/mask.webp","x":343,"y":305,"w":1024,"h":1536},"assets/items/bag-shoulder-small/balance-r2/protect.png":{"src":"assets/items/bag-shoulder-small/balance-r2/protect.webp","x":352,"y":378,"w":1024,"h":1536},"assets/items/bag-shoulder-small/balance-seoul-a/base.png":{"src":"assets/items/bag-shoulder-small/balance-seoul-a/base.webp","x":386,"y":295,"w":1024,"h":1536},"assets/items/bag-shoulder-small/balance-seoul-a/mask.png":{"src":"assets/items/bag-shoulder-small/balance-seoul-a/mask.webp","x":387,"y":296,"w":1024,"h":1536},"assets/items/bag-shoulder-small/balance-seoul-a/protect.png":{"src":"assets/items/bag-shoulder-small/balance-seoul-a/protect.webp","x":396,"y":501,"w":1024,"h":1536},"assets/items/top-stripe-tee/balance-r2/base.png":{"src":"assets/items/top-stripe-tee/balance-r2/base.webp","x":313,"y":292,"w":1024,"h":1536},"assets/items/top-stripe-tee/balance-r2/mask.png":{"src":"assets/items/top-stripe-tee/balance-r2/mask.webp","x":314,"y":293,"w":1024,"h":1536},"assets/items/top-stripe-tee/balance-seoul-a/base.png":{"src":"assets/items/top-stripe-tee/balance-seoul-a/base.webp","x":337,"y":285,"w":1024,"h":1536},"assets/items/top-stripe-tee/balance-seoul-a/mask.png":{"src":"assets/items/top-stripe-tee/balance-seoul-a/mask.webp","x":337,"y":286,"w":1024,"h":1536},"assets/items/top-knit-crew/balance-r2/base.png":{"src":"assets/items/top-knit-crew/balance-r2/base.webp","x":301,"y":291,"w":1024,"h":1536},"assets/items/top-knit-crew/balance-r2/mask.png":{"src":"assets/items/top-knit-crew/balance-r2/mask.webp","x":302,"y":292,"w":1024,"h":1536},"assets/items/top-knit-crew/balance-seoul-a/base.png":{"src":"assets/items/top-knit-crew/balance-seoul-a/base.webp","x":330,"y":283,"w":1024,"h":1536},"assets/items/top-knit-crew/balance-seoul-a/mask.png":{"src":"assets/items/top-knit-crew/balance-seoul-a/mask.webp","x":331,"y":284,"w":1024,"h":1536},"assets/items/top-turtleneck/balance-r2/base.png":{"src":"assets/items/top-turtleneck/balance-r2/base.webp","x":317,"y":248,"w":1024,"h":1536},"assets/items/top-turtleneck/balance-r2/mask.png":{"src":"assets/items/top-turtleneck/balance-r2/mask.webp","x":319,"y":249,"w":1024,"h":1536},"assets/items/top-turtleneck/balance-seoul-a/base.png":{"src":"assets/items/top-turtleneck/balance-seoul-a/base.webp","x":336,"y":246,"w":1024,"h":1536},"assets/items/top-turtleneck/balance-seoul-a/mask.png":{"src":"assets/items/top-turtleneck/balance-seoul-a/mask.webp","x":336,"y":247,"w":1024,"h":1536},"assets/items/top-sweatshirt/balance-r2/base.png":{"src":"assets/items/top-sweatshirt/balance-r2/base.webp","x":287,"y":290,"w":1024,"h":1536},"assets/items/top-sweatshirt/balance-r2/mask.png":{"src":"assets/items/top-sweatshirt/balance-r2/mask.webp","x":288,"y":291,"w":1024,"h":1536},"assets/items/top-sweatshirt/balance-seoul-a/base.png":{"src":"assets/items/top-sweatshirt/balance-seoul-a/base.webp","x":307,"y":284,"w":1024,"h":1536},"assets/items/top-sweatshirt/balance-seoul-a/mask.png":{"src":"assets/items/top-sweatshirt/balance-seoul-a/mask.webp","x":307,"y":285,"w":1024,"h":1536},"assets/items/top-knit-sleeveless/balance-seoul-a/base.png":{"src":"assets/items/top-knit-sleeveless/balance-seoul-a/base.webp","x":406,"y":288,"w":1024,"h":1536},"assets/items/top-knit-sleeveless/balance-seoul-a/mask.png":{"src":"assets/items/top-knit-sleeveless/balance-seoul-a/mask.webp","x":407,"y":289,"w":1024,"h":1536},"assets/items/top-longsleeve-slim/balance-seoul-a/base.png":{"src":"assets/items/top-longsleeve-slim/balance-seoul-a/base.webp","x":336,"y":288,"w":1024,"h":1536},"assets/items/top-longsleeve-slim/balance-seoul-a/mask.png":{"src":"assets/items/top-longsleeve-slim/balance-seoul-a/mask.webp","x":337,"y":288,"w":1024,"h":1536},"assets/items/bottom-midi-skirt/balance-r2/base.png":{"src":"assets/items/bottom-midi-skirt/balance-r2/base.webp","x":306,"y":637,"w":1024,"h":1536},"assets/items/bottom-midi-skirt/balance-r2/mask.png":{"src":"assets/items/bottom-midi-skirt/balance-r2/mask.webp","x":306,"y":638,"w":1024,"h":1536},"assets/items/bottom-midi-skirt/balance-seoul-a/base.png":{"src":"assets/items/bottom-midi-skirt/balance-seoul-a/base.webp","x":347,"y":547,"w":1024,"h":1536},"assets/items/bottom-midi-skirt/balance-seoul-a/mask.png":{"src":"assets/items/bottom-midi-skirt/balance-seoul-a/mask.webp","x":348,"y":548,"w":1024,"h":1536},"assets/items/bottom-slacks/balance-seoul-a/base.png":{"src":"assets/items/bottom-slacks/balance-seoul-a/base.webp","x":396,"y":580,"w":1024,"h":1536},"assets/items/bottom-slacks/balance-seoul-a/mask.png":{"src":"assets/items/bottom-slacks/balance-seoul-a/mask.webp","x":396,"y":581,"w":1024,"h":1536},"assets/items/bottom-jeans-straight/balance-seoul-a/base.png":{"src":"assets/items/bottom-jeans-straight/balance-seoul-a/base.webp","x":397,"y":585,"w":1024,"h":1536},"assets/items/bottom-jeans-straight/balance-seoul-a/mask.png":{"src":"assets/items/bottom-jeans-straight/balance-seoul-a/mask.webp","x":398,"y":586,"w":1024,"h":1536},"assets/items/bottom-jeans-bootcut/balance-seoul-a/base.png":{"src":"assets/items/bottom-jeans-bootcut/balance-seoul-a/base.webp","x":387,"y":581,"w":1024,"h":1536},"assets/items/bottom-jeans-bootcut/balance-seoul-a/mask.png":{"src":"assets/items/bottom-jeans-bootcut/balance-seoul-a/mask.webp","x":387,"y":582,"w":1024,"h":1536},"assets/items/bottom-jeans-skinny/balance-seoul-a/base.png":{"src":"assets/items/bottom-jeans-skinny/balance-seoul-a/base.webp","x":398,"y":548,"w":1024,"h":1536},"assets/items/bottom-jeans-skinny/balance-seoul-a/mask.png":{"src":"assets/items/bottom-jeans-skinny/balance-seoul-a/mask.webp","x":398,"y":550,"w":1024,"h":1536},"assets/items/bottom-jeans-mom/balance-seoul-a/base.png":{"src":"assets/items/bottom-jeans-mom/balance-seoul-a/base.webp","x":393,"y":542,"w":1024,"h":1536},"assets/items/bottom-jeans-mom/balance-seoul-a/mask.png":{"src":"assets/items/bottom-jeans-mom/balance-seoul-a/mask.webp","x":394,"y":543,"w":1024,"h":1536},"assets/items/bottom-shorts-cotton/balance-seoul-a/base.png":{"src":"assets/items/bottom-shorts-cotton/balance-seoul-a/base.webp","x":395,"y":543,"w":1024,"h":1536},"assets/items/bottom-shorts-cotton/balance-seoul-a/mask.png":{"src":"assets/items/bottom-shorts-cotton/balance-seoul-a/mask.webp","x":396,"y":544,"w":1024,"h":1536},"assets/items/bottom-jeans-baggy/balance-seoul-a/base.png":{"src":"assets/items/bottom-jeans-baggy/balance-seoul-a/base.webp","x":361,"y":607,"w":1024,"h":1536},"assets/items/bottom-jeans-baggy/balance-seoul-a/mask.png":{"src":"assets/items/bottom-jeans-baggy/balance-seoul-a/mask.webp","x":362,"y":608,"w":1024,"h":1536},"assets/items/bottom-jeans-flare/balance-seoul-a/base.png":{"src":"assets/items/bottom-jeans-flare/balance-seoul-a/base.webp","x":353,"y":564,"w":1024,"h":1536},"assets/items/bottom-jeans-flare/balance-seoul-a/mask.png":{"src":"assets/items/bottom-jeans-flare/balance-seoul-a/mask.webp","x":353,"y":565,"w":1024,"h":1536},"assets/items/bottom-jeans-white/balance-seoul-a/base.png":{"src":"assets/items/bottom-jeans-white/balance-seoul-a/base.webp","x":397,"y":525,"w":1024,"h":1536},"assets/items/bottom-jeans-white/balance-seoul-a/mask.png":{"src":"assets/items/bottom-jeans-white/balance-seoul-a/mask.webp","x":398,"y":527,"w":1024,"h":1536},"assets/items/bottom-denim-shorts/balance-seoul-a/base.png":{"src":"assets/items/bottom-denim-shorts/balance-seoul-a/base.webp","x":395,"y":542,"w":1024,"h":1536},"assets/items/bottom-denim-shorts/balance-seoul-a/mask.png":{"src":"assets/items/bottom-denim-shorts/balance-seoul-a/mask.webp","x":396,"y":543,"w":1024,"h":1536},"assets/items/dress-linen-light/balance-seoul-a/base.png":{"src":"assets/items/dress-linen-light/balance-seoul-a/base.webp","x":314,"y":287,"w":1024,"h":1536},"assets/items/dress-linen-light/balance-seoul-a/mask.png":{"src":"assets/items/dress-linen-light/balance-seoul-a/mask.webp","x":314,"y":288,"w":1024,"h":1536},"assets/items/dress-shirt/balance-seoul-a/base.png":{"src":"assets/items/dress-shirt/balance-seoul-a/base.webp","x":339,"y":256,"w":1024,"h":1536},"assets/items/dress-shirt/balance-seoul-a/mask.png":{"src":"assets/items/dress-shirt/balance-seoul-a/mask.webp","x":339,"y":257,"w":1024,"h":1536},"assets/items/dress-slip/balance-seoul-a/base.png":{"src":"assets/items/dress-slip/balance-seoul-a/base.webp","x":397,"y":295,"w":1024,"h":1536},"assets/items/dress-slip/balance-seoul-a/mask.png":{"src":"assets/items/dress-slip/balance-seoul-a/mask.webp","x":397,"y":295,"w":1024,"h":1536},"assets/items/dress-flare/balance-seoul-a/base.png":{"src":"assets/items/dress-flare/balance-seoul-a/base.webp","x":295,"y":287,"w":1024,"h":1536},"assets/items/dress-flare/balance-seoul-a/mask.png":{"src":"assets/items/dress-flare/balance-seoul-a/mask.webp","x":296,"y":288,"w":1024,"h":1536},"assets/items/outer-cardigan/balance-seoul-a/base.png":{"src":"assets/items/outer-cardigan/balance-seoul-a/base.webp","x":331,"y":286,"w":1024,"h":1536},"assets/items/outer-cardigan/balance-seoul-a/mask.png":{"src":"assets/items/outer-cardigan/balance-seoul-a/mask.webp","x":332,"y":287,"w":1024,"h":1536},"assets/items/outer-denim-jacket/balance-seoul-a/base.png":{"src":"assets/items/outer-denim-jacket/balance-seoul-a/base.webp","x":323,"y":267,"w":1024,"h":1536},"assets/items/outer-denim-jacket/balance-seoul-a/mask.png":{"src":"assets/items/outer-denim-jacket/balance-seoul-a/mask.webp","x":324,"y":268,"w":1024,"h":1536},"assets/items/outer-wool-coat/balance-seoul-a/base.png":{"src":"assets/items/outer-wool-coat/balance-seoul-a/base.webp","x":319,"y":251,"w":1024,"h":1536},"assets/items/outer-wool-coat/balance-seoul-a/mask.png":{"src":"assets/items/outer-wool-coat/balance-seoul-a/mask.webp","x":319,"y":252,"w":1024,"h":1536},"assets/items/shoes-sandal/balance-seoul-a/base.png":{"src":"assets/items/shoes-sandal/balance-seoul-a/base.webp","x":406,"y":1361,"w":1024,"h":1536},"assets/items/shoes-sandal/balance-seoul-a/mask.png":{"src":"assets/items/shoes-sandal/balance-seoul-a/mask.webp","x":407,"y":1362,"w":1024,"h":1536},"assets/items/shoes-ankle-boots/balance-seoul-a/base.png":{"src":"assets/items/shoes-ankle-boots/balance-seoul-a/base.webp","x":402,"y":1246,"w":1024,"h":1536},"assets/items/shoes-ankle-boots/balance-seoul-a/mask.png":{"src":"assets/items/shoes-ankle-boots/balance-seoul-a/mask.webp","x":402,"y":1247,"w":1024,"h":1536},"assets/items/shoes-pumps/balance-seoul-a/base.png":{"src":"assets/items/shoes-pumps/balance-seoul-a/base.webp","x":396,"y":1265,"w":1024,"h":1536},"assets/items/shoes-pumps/balance-seoul-a/mask.png":{"src":"assets/items/shoes-pumps/balance-seoul-a/mask.webp","x":396,"y":1266,"w":1024,"h":1536},"assets/items/shoes-maryjane/balance-seoul-a/base.png":{"src":"assets/items/shoes-maryjane/balance-seoul-a/base.webp","x":404,"y":1355,"w":1024,"h":1536},"assets/items/shoes-maryjane/balance-seoul-a/mask.png":{"src":"assets/items/shoes-maryjane/balance-seoul-a/mask.webp","x":405,"y":1356,"w":1024,"h":1536},"assets/items/bag-tote/balance-seoul-a/base.png":{"src":"assets/items/bag-tote/balance-seoul-a/base.webp","x":237,"y":790,"w":1024,"h":1536},"assets/items/bag-tote/balance-seoul-a/mask.png":{"src":"assets/items/bag-tote/balance-seoul-a/mask.webp","x":238,"y":791,"w":1024,"h":1536},"assets/items/bag-tote/balance-seoul-a/protect.png":{"src":"assets/items/bag-tote/balance-seoul-a/protect.webp","x":237,"y":790,"w":1024,"h":1536},"assets/items/bag-crossbody/balance-seoul-a/base.png":{"src":"assets/items/bag-crossbody/balance-seoul-a/base.webp","x":425,"y":291,"w":1024,"h":1536},"assets/items/bag-crossbody/balance-seoul-a/mask.png":{"src":"assets/items/bag-crossbody/balance-seoul-a/mask.webp","x":426,"y":292,"w":1024,"h":1536},"assets/items/bag-crossbody/balance-seoul-a/protect.png":{"src":"assets/items/bag-crossbody/balance-seoul-a/protect.webp","x":565,"y":574,"w":1024,"h":1536},"assets/items/bag-rattan/balance-seoul-a/base.png":{"src":"assets/items/bag-rattan/balance-seoul-a/base.webp","x":277,"y":515,"w":1024,"h":1536},"assets/items/bag-rattan/balance-seoul-a/mask.png":{"src":"assets/items/bag-rattan/balance-seoul-a/mask.webp","x":277,"y":516,"w":1024,"h":1536},"assets/items/bag-rattan/balance-seoul-a/protect.png":{"src":"assets/items/bag-rattan/balance-seoul-a/protect.webp","x":277,"y":515,"w":1024,"h":1536},"assets/items/acc-cap/balance-seoul-a/base.png":{"src":"assets/items/acc-cap/balance-seoul-a/base.webp","x":421,"y":36,"w":1024,"h":1536},"assets/items/acc-cap/balance-seoul-a/mask.png":{"src":"assets/items/acc-cap/balance-seoul-a/mask.webp","x":422,"y":37,"w":1024,"h":1536},"assets/items/acc-cap/balance-seoul-a/protect.png":{"src":"assets/items/acc-cap/balance-seoul-a/protect.webp","x":421,"y":36,"w":1024,"h":1536},"assets/items/acc-sunglasses/balance-seoul-a/base.png":{"src":"assets/items/acc-sunglasses/balance-seoul-a/base.webp","x":421,"y":103,"w":1024,"h":1536},"assets/items/acc-sunglasses/balance-seoul-a/mask.png":{"src":"assets/items/acc-sunglasses/balance-seoul-a/mask.webp","x":422,"y":105,"w":1024,"h":1536},"assets/items/acc-sunglasses/balance-seoul-a/protect.png":{"src":"assets/items/acc-sunglasses/balance-seoul-a/protect.webp","x":421,"y":103,"w":1024,"h":1536},"assets/items/acc-pearl-necklace/balance-seoul-a/base.png":{"src":"assets/items/acc-pearl-necklace/balance-seoul-a/base.webp","x":421,"y":36,"w":1024,"h":1536},"assets/items/acc-pearl-necklace/balance-seoul-a/mask.png":{"src":"assets/items/acc-pearl-necklace/balance-seoul-a/mask.webp","x":422,"y":37,"w":1024,"h":1536},"assets/items/acc-pearl-necklace/balance-seoul-a/protect.png":{"src":"assets/items/acc-pearl-necklace/balance-seoul-a/protect.webp","x":422,"y":36,"w":1024,"h":1536},"assets/items/acc-gold-earrings/balance-seoul-a/base.png":{"src":"assets/items/acc-gold-earrings/balance-seoul-a/base.webp","x":419,"y":114,"w":1024,"h":1536},"assets/items/acc-gold-earrings/balance-seoul-a/mask.png":{"src":"assets/items/acc-gold-earrings/balance-seoul-a/mask.webp","x":420,"y":115,"w":1024,"h":1536},"assets/items/acc-gold-earrings/balance-seoul-a/protect.png":{"src":"assets/items/acc-gold-earrings/balance-seoul-a/protect.webp","x":419,"y":114,"w":1024,"h":1536},"assets/items/acc-scarf/balance-seoul-a/base.png":{"src":"assets/items/acc-scarf/balance-seoul-a/base.webp","x":450,"y":250,"w":1024,"h":1536},"assets/items/acc-scarf/balance-seoul-a/mask.png":{"src":"assets/items/acc-scarf/balance-seoul-a/mask.webp","x":451,"y":251,"w":1024,"h":1536},"assets/items/acc-scarf/balance-seoul-a/protect.png":{"src":"assets/items/acc-scarf/balance-seoul-a/protect.webp","x":457,"y":250,"w":1024,"h":1536},"assets/items/acc-hair-ribbon/balance-seoul-a/base.png":{"src":"assets/items/acc-hair-ribbon/balance-seoul-a/base.webp","x":421,"y":36,"w":1024,"h":1536},"assets/items/acc-hair-ribbon/balance-seoul-a/mask.png":{"src":"assets/items/acc-hair-ribbon/balance-seoul-a/mask.webp","x":422,"y":38,"w":1024,"h":1536},"assets/items/acc-hair-ribbon/balance-seoul-a/protect.png":{"src":"assets/items/acc-hair-ribbon/balance-seoul-a/protect.webp","x":422,"y":36,"w":1024,"h":1536},"assets/thumbs/top-tshirt-basic.webp":"assets/thumbs/top-tshirt-basic.webp","assets/thumbs/top-blouse-basic.webp":"assets/thumbs/top-blouse-basic.webp","assets/thumbs/bottom-denim-wide.webp":"assets/thumbs/bottom-denim-wide.webp","assets/thumbs/shoes-sneaker-white.webp":"assets/thumbs/shoes-sneaker-white.webp","assets/thumbs/top-shirt-white.webp":"assets/thumbs/top-shirt-white.webp","assets/thumbs/outer-blazer.webp":"assets/thumbs/outer-blazer.webp","assets/thumbs/outer-trench.webp":"assets/thumbs/outer-trench.webp","assets/thumbs/bottom-mini-skirt.webp":"assets/thumbs/bottom-mini-skirt.webp","assets/thumbs/shoes-loafer.webp":"assets/thumbs/shoes-loafer.webp","assets/thumbs/bag-shoulder-small.webp":"assets/thumbs/bag-shoulder-small.webp","assets/thumbs/top-stripe-tee.webp":"assets/thumbs/top-stripe-tee.webp","assets/thumbs/top-knit-crew.webp":"assets/thumbs/top-knit-crew.webp","assets/thumbs/top-turtleneck.webp":"assets/thumbs/top-turtleneck.webp","assets/thumbs/top-sweatshirt.webp":"assets/thumbs/top-sweatshirt.webp","assets/thumbs/top-knit-sleeveless.webp":"assets/thumbs/top-knit-sleeveless.webp","assets/thumbs/top-longsleeve-slim.webp":"assets/thumbs/top-longsleeve-slim.webp","assets/thumbs/bottom-midi-skirt.webp":"assets/thumbs/bottom-midi-skirt.webp","assets/thumbs/bottom-slacks.webp":"assets/thumbs/bottom-slacks.webp","assets/thumbs/bottom-jeans-straight.webp":"assets/thumbs/bottom-jeans-straight.webp","assets/thumbs/bottom-jeans-bootcut.webp":"assets/thumbs/bottom-jeans-bootcut.webp","assets/thumbs/bottom-jeans-skinny.webp":"assets/thumbs/bottom-jeans-skinny.webp","assets/thumbs/bottom-jeans-mom.webp":"assets/thumbs/bottom-jeans-mom.webp","assets/thumbs/bottom-shorts-cotton.webp":"assets/thumbs/bottom-shorts-cotton.webp","assets/thumbs/bottom-jeans-baggy.webp":"assets/thumbs/bottom-jeans-baggy.webp","assets/thumbs/bottom-jeans-flare.webp":"assets/thumbs/bottom-jeans-flare.webp","assets/thumbs/bottom-jeans-white.webp":"assets/thumbs/bottom-jeans-white.webp","assets/thumbs/bottom-denim-shorts.webp":"assets/thumbs/bottom-denim-shorts.webp","assets/thumbs/dress-linen-light.webp":"assets/thumbs/dress-linen-light.webp","assets/thumbs/dress-shirt.webp":"assets/thumbs/dress-shirt.webp","assets/thumbs/dress-slip.webp":"assets/thumbs/dress-slip.webp","assets/thumbs/dress-flare.webp":"assets/thumbs/dress-flare.webp","assets/thumbs/outer-cardigan.webp":"assets/thumbs/outer-cardigan.webp","assets/thumbs/outer-denim-jacket.webp":"assets/thumbs/outer-denim-jacket.webp","assets/thumbs/outer-wool-coat.webp":"assets/thumbs/outer-wool-coat.webp","assets/thumbs/shoes-sandal.webp":"assets/thumbs/shoes-sandal.webp","assets/thumbs/shoes-ankle-boots.webp":"assets/thumbs/shoes-ankle-boots.webp","assets/thumbs/shoes-pumps.webp":"assets/thumbs/shoes-pumps.webp","assets/thumbs/shoes-maryjane.webp":"assets/thumbs/shoes-maryjane.webp","assets/thumbs/bag-tote.webp":"assets/thumbs/bag-tote.webp","assets/thumbs/bag-crossbody.webp":"assets/thumbs/bag-crossbody.webp","assets/thumbs/bag-rattan.webp":"assets/thumbs/bag-rattan.webp","assets/thumbs/acc-cap.webp":"assets/thumbs/acc-cap.webp","assets/thumbs/acc-sunglasses.webp":"assets/thumbs/acc-sunglasses.webp","assets/thumbs/acc-pearl-necklace.webp":"assets/thumbs/acc-pearl-necklace.webp","assets/thumbs/acc-gold-earrings.webp":"assets/thumbs/acc-gold-earrings.webp","assets/thumbs/acc-scarf.webp":"assets/thumbs/acc-scarf.webp","assets/thumbs/acc-hair-ribbon.webp":"assets/thumbs/acc-hair-ribbon.webp","assets/scenes/dressroom/bg.png":{"src":"assets/scenes/dressroom/bg.webp","x":0,"y":0,"w":1024,"h":1536},"assets/scenes/seongsu-cafe-late-afternoon/bg.png":{"src":"assets/scenes/seongsu-cafe-late-afternoon/bg.webp","x":0,"y":0,"w":1024,"h":1536},"assets/scenes/hangang-sunset/bg.png":{"src":"assets/scenes/hangang-sunset/bg.webp","x":0,"y":0,"w":1024,"h":1536},"assets/face/closeup-base.png":{"src":"assets/face/closeup-base.webp","x":0,"y":0,"w":1254,"h":1254},"assets/face/closeup-hair-mask.png":{"src":"assets/face/closeup-hair-mask.webp","x":0,"y":0,"w":1254,"h":1254},"assets/face/eyes/eye-02/closeup.png":{"src":"assets/face/eyes/eye-02/closeup.webp","x":0,"y":0,"w":509,"h":209},"assets/face/eyes/eye-02/body.png":{"src":"assets/face/eyes/eye-02/body.webp","x":0,"y":0,"w":143,"h":60},"assets/face/eyes/eye-03/closeup.png":{"src":"assets/face/eyes/eye-03/closeup.webp","x":0,"y":0,"w":509,"h":209},"assets/face/eyes/eye-03/body.png":{"src":"assets/face/eyes/eye-03/body.webp","x":0,"y":0,"w":143,"h":60},"assets/face/eyes/eye-04/closeup.png":{"src":"assets/face/eyes/eye-04/closeup.webp","x":0,"y":0,"w":509,"h":209},"assets/face/eyes/eye-04/body.png":{"src":"assets/face/eyes/eye-04/body.webp","x":0,"y":0,"w":143,"h":60},"assets/face/eyes/eye-05/closeup.png":{"src":"assets/face/eyes/eye-05/closeup.webp","x":0,"y":0,"w":509,"h":209},"assets/face/eyes/eye-05/body.png":{"src":"assets/face/eyes/eye-05/body.webp","x":0,"y":0,"w":143,"h":60},"assets/face/eyes/eye-06/closeup.png":{"src":"assets/face/eyes/eye-06/closeup.webp","x":0,"y":0,"w":509,"h":209},"assets/face/eyes/eye-06/body.png":{"src":"assets/face/eyes/eye-06/body.webp","x":0,"y":0,"w":143,"h":60},"assets/face/eyes/eye-07/closeup.png":{"src":"assets/face/eyes/eye-07/closeup.webp","x":0,"y":0,"w":509,"h":209},"assets/face/eyes/eye-07/body.png":{"src":"assets/face/eyes/eye-07/body.webp","x":0,"y":0,"w":143,"h":60},"assets/face/eyes/eye-08/closeup.png":{"src":"assets/face/eyes/eye-08/closeup.webp","x":0,"y":0,"w":509,"h":209},"assets/face/eyes/eye-08/body.png":{"src":"assets/face/eyes/eye-08/body.webp","x":0,"y":0,"w":143,"h":60},"assets/face/eyes/eye-09/closeup.png":{"src":"assets/face/eyes/eye-09/closeup.webp","x":0,"y":0,"w":509,"h":209},"assets/face/eyes/eye-09/body.png":{"src":"assets/face/eyes/eye-09/body.webp","x":0,"y":0,"w":143,"h":60},"assets/face/eyes/eye-10/closeup.png":{"src":"assets/face/eyes/eye-10/closeup.webp","x":0,"y":0,"w":509,"h":209},"assets/face/eyes/eye-10/body.png":{"src":"assets/face/eyes/eye-10/body.webp","x":0,"y":0,"w":143,"h":60},"assets/face/brows/brow-02/closeup.png":{"src":"assets/face/brows/brow-02/closeup.webp","x":0,"y":0,"w":477,"h":129},"assets/face/brows/brow-02/body.png":{"src":"assets/face/brows/brow-02/body.webp","x":0,"y":0,"w":134,"h":38},"assets/face/brows/brow-03/closeup.png":{"src":"assets/face/brows/brow-03/closeup.webp","x":0,"y":0,"w":477,"h":129},"assets/face/brows/brow-03/body.png":{"src":"assets/face/brows/brow-03/body.webp","x":0,"y":0,"w":134,"h":38},"assets/face/brows/brow-04/closeup.png":{"src":"assets/face/brows/brow-04/closeup.webp","x":0,"y":0,"w":477,"h":129},"assets/face/brows/brow-04/body.png":{"src":"assets/face/brows/brow-04/body.webp","x":0,"y":0,"w":134,"h":38},"assets/face/brows/brow-05/closeup.png":{"src":"assets/face/brows/brow-05/closeup.webp","x":0,"y":0,"w":477,"h":129},"assets/face/brows/brow-05/body.png":{"src":"assets/face/brows/brow-05/body.webp","x":0,"y":0,"w":134,"h":38},"assets/face/brows/brow-06/closeup.png":{"src":"assets/face/brows/brow-06/closeup.webp","x":0,"y":0,"w":477,"h":129},"assets/face/brows/brow-06/body.png":{"src":"assets/face/brows/brow-06/body.webp","x":0,"y":0,"w":134,"h":38},"assets/face/brows/brow-07/closeup.png":{"src":"assets/face/brows/brow-07/closeup.webp","x":0,"y":0,"w":477,"h":129},"assets/face/brows/brow-07/body.png":{"src":"assets/face/brows/brow-07/body.webp","x":0,"y":0,"w":134,"h":38},"assets/face/brows/brow-08/closeup.png":{"src":"assets/face/brows/brow-08/closeup.webp","x":0,"y":0,"w":477,"h":129},"assets/face/brows/brow-08/body.png":{"src":"assets/face/brows/brow-08/body.webp","x":0,"y":0,"w":134,"h":38},"assets/face/lips/lip-02/closeup.png":{"src":"assets/face/lips/lip-02/closeup.webp","x":0,"y":0,"w":253,"h":181},"assets/face/lips/lip-02/body.png":{"src":"assets/face/lips/lip-02/body.webp","x":0,"y":0,"w":73,"h":52},"assets/face/lips/lip-03/closeup.png":{"src":"assets/face/lips/lip-03/closeup.webp","x":0,"y":0,"w":253,"h":181},"assets/face/lips/lip-03/body.png":{"src":"assets/face/lips/lip-03/body.webp","x":0,"y":0,"w":73,"h":52},"assets/face/lips/lip-04/closeup.png":{"src":"assets/face/lips/lip-04/closeup.webp","x":0,"y":0,"w":253,"h":181},"assets/face/lips/lip-04/body.png":{"src":"assets/face/lips/lip-04/body.webp","x":0,"y":0,"w":73,"h":52},"assets/face/lips/lip-05/closeup.png":{"src":"assets/face/lips/lip-05/closeup.webp","x":0,"y":0,"w":253,"h":181},"assets/face/lips/lip-05/body.png":{"src":"assets/face/lips/lip-05/body.webp","x":0,"y":0,"w":73,"h":52},"assets/face/lips/lip-06/closeup.png":{"src":"assets/face/lips/lip-06/closeup.webp","x":0,"y":0,"w":253,"h":181},"assets/face/lips/lip-06/body.png":{"src":"assets/face/lips/lip-06/body.webp","x":0,"y":0,"w":73,"h":52},"assets/face/lips/lip-07/closeup.png":{"src":"assets/face/lips/lip-07/closeup.webp","x":0,"y":0,"w":253,"h":181},"assets/face/lips/lip-07/body.png":{"src":"assets/face/lips/lip-07/body.webp","x":0,"y":0,"w":73,"h":52},"assets/face/lips/lip-08/closeup.png":{"src":"assets/face/lips/lip-08/closeup.webp","x":0,"y":0,"w":253,"h":181},"assets/face/lips/lip-08/body.png":{"src":"assets/face/lips/lip-08/body.webp","x":0,"y":0,"w":73,"h":52},"assets/face/nose/nose-02/closeup.png":{"src":"assets/face/nose/nose-02/closeup.webp","x":0,"y":0,"w":169,"h":187},"assets/face/nose/nose-02/body.png":{"src":"assets/face/nose/nose-02/body.webp","x":0,"y":0,"w":49,"h":54},"assets/face/nose/nose-03/closeup.png":{"src":"assets/face/nose/nose-03/closeup.webp","x":0,"y":0,"w":169,"h":187},"assets/face/nose/nose-03/body.png":{"src":"assets/face/nose/nose-03/body.webp","x":0,"y":0,"w":49,"h":54},"assets/face/nose/nose-04/closeup.png":{"src":"assets/face/nose/nose-04/closeup.webp","x":0,"y":0,"w":169,"h":187},"assets/face/nose/nose-04/body.png":{"src":"assets/face/nose/nose-04/body.webp","x":0,"y":0,"w":49,"h":54}};</script>
+  <script>window.DYS = window.DYS || {}; DYS.assetManifest = {"assets/bases/balance-front-neutral/r2/base.png":{"src":"assets/bases/balance-front-neutral/r2/base.webp","x":308,"y":21,"w":1024,"h":1536},"assets/bases/balance-front-neutral/r2/base-covered.png":{"src":"assets/bases/balance-front-neutral/r2/base-covered.webp","x":308,"y":21,"w":1024,"h":1536},"assets/bases/balance-front-neutral/r2/hair-mask.png":{"src":"assets/bases/balance-front-neutral/r2/hair-mask.webp","x":416,"y":21,"w":1024,"h":1536},"assets/bases/balance-seoul-a/r1/base.png":{"src":"assets/bases/balance-seoul-a/r1/base.webp","x":326,"y":20,"w":1024,"h":1536},"assets/bases/balance-seoul-a/r1/base-covered.png":{"src":"assets/bases/balance-seoul-a/r1/base-covered.webp","x":326,"y":20,"w":1024,"h":1536},"assets/bases/balance-seoul-a/r1/hair-mask.png":{"src":"assets/bases/balance-seoul-a/r1/hair-mask.webp","x":415,"y":20,"w":1024,"h":1536},"assets/items/top-tshirt-basic/balance-r2/base.png":{"src":"assets/items/top-tshirt-basic/balance-r2/base.webp","x":331,"y":292,"w":1024,"h":1536},"assets/items/top-tshirt-basic/balance-r2/mask.png":{"src":"assets/items/top-tshirt-basic/balance-r2/mask.webp","x":331,"y":293,"w":1024,"h":1536},"assets/items/top-tshirt-basic/balance-seoul-a/base.png":{"src":"assets/items/top-tshirt-basic/balance-seoul-a/base.webp","x":343,"y":284,"w":1024,"h":1536},"assets/items/top-tshirt-basic/balance-seoul-a/mask.png":{"src":"assets/items/top-tshirt-basic/balance-seoul-a/mask.webp","x":344,"y":285,"w":1024,"h":1536},"assets/items/top-blouse-basic/balance-r2/base.png":{"src":"assets/items/top-blouse-basic/balance-r2/base.webp","x":313,"y":267,"w":1024,"h":1536},"assets/items/top-blouse-basic/balance-r2/mask.png":{"src":"assets/items/top-blouse-basic/balance-r2/mask.webp","x":313,"y":268,"w":1024,"h":1536},"assets/items/top-blouse-basic/balance-seoul-a/base.png":{"src":"assets/items/top-blouse-basic/balance-seoul-a/base.webp","x":331,"y":262,"w":1024,"h":1536},"assets/items/top-blouse-basic/balance-seoul-a/mask.png":{"src":"assets/items/top-blouse-basic/balance-seoul-a/mask.webp","x":331,"y":263,"w":1024,"h":1536},"assets/items/bottom-denim-wide/balance-r2/base.png":{"src":"assets/items/bottom-denim-wide/balance-r2/base.webp","x":363,"y":563,"w":1024,"h":1536},"assets/items/bottom-denim-wide/balance-r2/mask.png":{"src":"assets/items/bottom-denim-wide/balance-r2/mask.webp","x":364,"y":564,"w":1024,"h":1536},"assets/items/bottom-denim-wide/balance-seoul-a/base.png":{"src":"assets/items/bottom-denim-wide/balance-seoul-a/base.webp","x":393,"y":545,"w":1024,"h":1536},"assets/items/bottom-denim-wide/balance-seoul-a/mask.png":{"src":"assets/items/bottom-denim-wide/balance-seoul-a/mask.webp","x":393,"y":546,"w":1024,"h":1536},"assets/items/shoes-sneaker-white/balance-r2/base.png":{"src":"assets/items/shoes-sneaker-white/balance-r2/base.webp","x":391,"y":1346,"w":1024,"h":1536},"assets/items/shoes-sneaker-white/balance-r2/mask.png":{"src":"assets/items/shoes-sneaker-white/balance-r2/mask.webp","x":392,"y":1347,"w":1024,"h":1536},"assets/items/shoes-sneaker-white/balance-seoul-a/base.png":{"src":"assets/items/shoes-sneaker-white/balance-seoul-a/base.webp","x":407,"y":1251,"w":1024,"h":1536},"assets/items/shoes-sneaker-white/balance-seoul-a/mask.png":{"src":"assets/items/shoes-sneaker-white/balance-seoul-a/mask.webp","x":407,"y":1252,"w":1024,"h":1536},"assets/items/top-shirt-white/balance-r2/base.png":{"src":"assets/items/top-shirt-white/balance-r2/base.webp","x":329,"y":262,"w":1024,"h":1536},"assets/items/top-shirt-white/balance-r2/mask.png":{"src":"assets/items/top-shirt-white/balance-r2/mask.webp","x":330,"y":263,"w":1024,"h":1536},"assets/items/top-shirt-white/balance-seoul-a/base.png":{"src":"assets/items/top-shirt-white/balance-seoul-a/base.webp","x":339,"y":257,"w":1024,"h":1536},"assets/items/top-shirt-white/balance-seoul-a/mask.png":{"src":"assets/items/top-shirt-white/balance-seoul-a/mask.webp","x":340,"y":258,"w":1024,"h":1536},"assets/items/outer-blazer/balance-r2/base.png":{"src":"assets/items/outer-blazer/balance-r2/base.webp","x":307,"y":252,"w":1024,"h":1536},"assets/items/outer-blazer/balance-r2/mask.png":{"src":"assets/items/outer-blazer/balance-r2/mask.webp","x":308,"y":253,"w":1024,"h":1536},"assets/items/outer-blazer/balance-seoul-a/base.png":{"src":"assets/items/outer-blazer/balance-seoul-a/base.webp","x":325,"y":261,"w":1024,"h":1536},"assets/items/outer-blazer/balance-seoul-a/mask.png":{"src":"assets/items/outer-blazer/balance-seoul-a/mask.webp","x":325,"y":262,"w":1024,"h":1536},"assets/items/outer-trench/balance-r2/base.png":{"src":"assets/items/outer-trench/balance-r2/base.webp","x":289,"y":255,"w":1024,"h":1536},"assets/items/outer-trench/balance-r2/back.png":{"src":"assets/items/outer-trench/balance-r2/back.webp","x":287,"y":515,"w":1024,"h":1536},"assets/items/outer-trench/balance-r2/mask.png":{"src":"assets/items/outer-trench/balance-r2/mask.webp","x":289,"y":256,"w":1024,"h":1536},"assets/items/outer-trench/balance-seoul-a/base.png":{"src":"assets/items/outer-trench/balance-seoul-a/base.webp","x":320,"y":254,"w":1024,"h":1536},"assets/items/outer-trench/balance-seoul-a/back.png":{"src":"assets/items/outer-trench/balance-seoul-a/back.webp","x":318,"y":498,"w":1024,"h":1536},"assets/items/outer-trench/balance-seoul-a/mask.png":{"src":"assets/items/outer-trench/balance-seoul-a/mask.webp","x":320,"y":255,"w":1024,"h":1536},"assets/items/bottom-mini-skirt/balance-r2/base.png":{"src":"assets/items/bottom-mini-skirt/balance-r2/base.webp","x":346,"y":584,"w":1024,"h":1536},"assets/items/bottom-mini-skirt/balance-r2/mask.png":{"src":"assets/items/bottom-mini-skirt/balance-r2/mask.webp","x":348,"y":586,"w":1024,"h":1536},"assets/items/bottom-mini-skirt/balance-seoul-a/base.png":{"src":"assets/items/bottom-mini-skirt/balance-seoul-a/base.webp","x":368,"y":552,"w":1024,"h":1536},"assets/items/bottom-mini-skirt/balance-seoul-a/mask.png":{"src":"assets/items/bottom-mini-skirt/balance-seoul-a/mask.webp","x":371,"y":553,"w":1024,"h":1536},"assets/items/shoes-loafer/balance-r2/base.png":{"src":"assets/items/shoes-loafer/balance-r2/base.webp","x":395,"y":1363,"w":1024,"h":1536},"assets/items/shoes-loafer/balance-r2/mask.png":{"src":"assets/items/shoes-loafer/balance-r2/mask.webp","x":395,"y":1365,"w":1024,"h":1536},"assets/items/shoes-loafer/balance-seoul-a/base.png":{"src":"assets/items/shoes-loafer/balance-seoul-a/base.webp","x":402,"y":1277,"w":1024,"h":1536},"assets/items/shoes-loafer/balance-seoul-a/mask.png":{"src":"assets/items/shoes-loafer/balance-seoul-a/mask.webp","x":403,"y":1278,"w":1024,"h":1536},"assets/items/bag-shoulder-small/balance-r2/base.png":{"src":"assets/items/bag-shoulder-small/balance-r2/base.webp","x":336,"y":302,"w":1024,"h":1536},"assets/items/bag-shoulder-small/balance-r2/mask.png":{"src":"assets/items/bag-shoulder-small/balance-r2/mask.webp","x":343,"y":302,"w":1024,"h":1536},"assets/items/bag-shoulder-small/balance-r2/protect.png":{"src":"assets/items/bag-shoulder-small/balance-r2/protect.webp","x":337,"y":377,"w":1024,"h":1536},"assets/items/bag-shoulder-small/balance-seoul-a/base.png":{"src":"assets/items/bag-shoulder-small/balance-seoul-a/base.webp","x":386,"y":295,"w":1024,"h":1536},"assets/items/bag-shoulder-small/balance-seoul-a/mask.png":{"src":"assets/items/bag-shoulder-small/balance-seoul-a/mask.webp","x":387,"y":296,"w":1024,"h":1536},"assets/items/bag-shoulder-small/balance-seoul-a/protect.png":{"src":"assets/items/bag-shoulder-small/balance-seoul-a/protect.webp","x":396,"y":501,"w":1024,"h":1536},"assets/items/top-stripe-tee/balance-r2/base.png":{"src":"assets/items/top-stripe-tee/balance-r2/base.webp","x":313,"y":292,"w":1024,"h":1536},"assets/items/top-stripe-tee/balance-r2/mask.png":{"src":"assets/items/top-stripe-tee/balance-r2/mask.webp","x":314,"y":293,"w":1024,"h":1536},"assets/items/top-stripe-tee/balance-seoul-a/base.png":{"src":"assets/items/top-stripe-tee/balance-seoul-a/base.webp","x":337,"y":285,"w":1024,"h":1536},"assets/items/top-stripe-tee/balance-seoul-a/mask.png":{"src":"assets/items/top-stripe-tee/balance-seoul-a/mask.webp","x":337,"y":286,"w":1024,"h":1536},"assets/items/top-knit-crew/balance-r2/base.png":{"src":"assets/items/top-knit-crew/balance-r2/base.webp","x":301,"y":291,"w":1024,"h":1536},"assets/items/top-knit-crew/balance-r2/mask.png":{"src":"assets/items/top-knit-crew/balance-r2/mask.webp","x":302,"y":292,"w":1024,"h":1536},"assets/items/top-knit-crew/balance-seoul-a/base.png":{"src":"assets/items/top-knit-crew/balance-seoul-a/base.webp","x":330,"y":283,"w":1024,"h":1536},"assets/items/top-knit-crew/balance-seoul-a/mask.png":{"src":"assets/items/top-knit-crew/balance-seoul-a/mask.webp","x":331,"y":284,"w":1024,"h":1536},"assets/items/top-turtleneck/balance-r2/base.png":{"src":"assets/items/top-turtleneck/balance-r2/base.webp","x":317,"y":246,"w":1024,"h":1536},"assets/items/top-turtleneck/balance-r2/mask.png":{"src":"assets/items/top-turtleneck/balance-r2/mask.webp","x":319,"y":249,"w":1024,"h":1536},"assets/items/top-turtleneck/balance-seoul-a/base.png":{"src":"assets/items/top-turtleneck/balance-seoul-a/base.webp","x":336,"y":246,"w":1024,"h":1536},"assets/items/top-turtleneck/balance-seoul-a/mask.png":{"src":"assets/items/top-turtleneck/balance-seoul-a/mask.webp","x":336,"y":247,"w":1024,"h":1536},"assets/items/top-sweatshirt/balance-r2/base.png":{"src":"assets/items/top-sweatshirt/balance-r2/base.webp","x":287,"y":290,"w":1024,"h":1536},"assets/items/top-sweatshirt/balance-r2/mask.png":{"src":"assets/items/top-sweatshirt/balance-r2/mask.webp","x":288,"y":291,"w":1024,"h":1536},"assets/items/top-sweatshirt/balance-seoul-a/base.png":{"src":"assets/items/top-sweatshirt/balance-seoul-a/base.webp","x":307,"y":284,"w":1024,"h":1536},"assets/items/top-sweatshirt/balance-seoul-a/mask.png":{"src":"assets/items/top-sweatshirt/balance-seoul-a/mask.webp","x":307,"y":285,"w":1024,"h":1536},"assets/items/top-knit-sleeveless/balance-seoul-a/base.png":{"src":"assets/items/top-knit-sleeveless/balance-seoul-a/base.webp","x":406,"y":288,"w":1024,"h":1536},"assets/items/top-knit-sleeveless/balance-seoul-a/mask.png":{"src":"assets/items/top-knit-sleeveless/balance-seoul-a/mask.webp","x":407,"y":289,"w":1024,"h":1536},"assets/items/top-knit-sleeveless/balance-r2/base.png":{"src":"assets/items/top-knit-sleeveless/balance-r2/base.webp","x":398,"y":299,"w":1024,"h":1536},"assets/items/top-knit-sleeveless/balance-r2/mask.png":{"src":"assets/items/top-knit-sleeveless/balance-r2/mask.webp","x":400,"y":299,"w":1024,"h":1536},"assets/items/top-longsleeve-slim/balance-seoul-a/base.png":{"src":"assets/items/top-longsleeve-slim/balance-seoul-a/base.webp","x":336,"y":288,"w":1024,"h":1536},"assets/items/top-longsleeve-slim/balance-seoul-a/mask.png":{"src":"assets/items/top-longsleeve-slim/balance-seoul-a/mask.webp","x":337,"y":288,"w":1024,"h":1536},"assets/items/top-longsleeve-slim/balance-r2/base.png":{"src":"assets/items/top-longsleeve-slim/balance-r2/base.webp","x":317,"y":290,"w":1024,"h":1536},"assets/items/top-longsleeve-slim/balance-r2/mask.png":{"src":"assets/items/top-longsleeve-slim/balance-r2/mask.webp","x":318,"y":291,"w":1024,"h":1536},"assets/items/bottom-midi-skirt/balance-r2/base.png":{"src":"assets/items/bottom-midi-skirt/balance-r2/base.webp","x":306,"y":636,"w":1024,"h":1536},"assets/items/bottom-midi-skirt/balance-r2/mask.png":{"src":"assets/items/bottom-midi-skirt/balance-r2/mask.webp","x":306,"y":637,"w":1024,"h":1536},"assets/items/bottom-midi-skirt/balance-seoul-a/base.png":{"src":"assets/items/bottom-midi-skirt/balance-seoul-a/base.webp","x":347,"y":547,"w":1024,"h":1536},"assets/items/bottom-midi-skirt/balance-seoul-a/mask.png":{"src":"assets/items/bottom-midi-skirt/balance-seoul-a/mask.webp","x":348,"y":548,"w":1024,"h":1536},"assets/items/bottom-slacks/balance-seoul-a/base.png":{"src":"assets/items/bottom-slacks/balance-seoul-a/base.webp","x":396,"y":580,"w":1024,"h":1536},"assets/items/bottom-slacks/balance-seoul-a/mask.png":{"src":"assets/items/bottom-slacks/balance-seoul-a/mask.webp","x":396,"y":581,"w":1024,"h":1536},"assets/items/bottom-slacks/balance-r2/base.png":{"src":"assets/items/bottom-slacks/balance-r2/base.webp","x":342,"y":584,"w":1024,"h":1536},"assets/items/bottom-slacks/balance-r2/mask.png":{"src":"assets/items/bottom-slacks/balance-r2/mask.webp","x":343,"y":585,"w":1024,"h":1536},"assets/items/bottom-jeans-straight/balance-seoul-a/base.png":{"src":"assets/items/bottom-jeans-straight/balance-seoul-a/base.webp","x":397,"y":585,"w":1024,"h":1536},"assets/items/bottom-jeans-straight/balance-seoul-a/mask.png":{"src":"assets/items/bottom-jeans-straight/balance-seoul-a/mask.webp","x":398,"y":586,"w":1024,"h":1536},"assets/items/bottom-jeans-straight/balance-r2/base.png":{"src":"assets/items/bottom-jeans-straight/balance-r2/base.webp","x":364,"y":586,"w":1024,"h":1536},"assets/items/bottom-jeans-straight/balance-r2/mask.png":{"src":"assets/items/bottom-jeans-straight/balance-r2/mask.webp","x":365,"y":587,"w":1024,"h":1536},"assets/items/bottom-jeans-bootcut/balance-seoul-a/base.png":{"src":"assets/items/bottom-jeans-bootcut/balance-seoul-a/base.webp","x":387,"y":581,"w":1024,"h":1536},"assets/items/bottom-jeans-bootcut/balance-seoul-a/mask.png":{"src":"assets/items/bottom-jeans-bootcut/balance-seoul-a/mask.webp","x":387,"y":582,"w":1024,"h":1536},"assets/items/bottom-jeans-skinny/balance-seoul-a/base.png":{"src":"assets/items/bottom-jeans-skinny/balance-seoul-a/base.webp","x":398,"y":548,"w":1024,"h":1536},"assets/items/bottom-jeans-skinny/balance-seoul-a/mask.png":{"src":"assets/items/bottom-jeans-skinny/balance-seoul-a/mask.webp","x":398,"y":550,"w":1024,"h":1536},"assets/items/bottom-jeans-mom/balance-seoul-a/base.png":{"src":"assets/items/bottom-jeans-mom/balance-seoul-a/base.webp","x":393,"y":542,"w":1024,"h":1536},"assets/items/bottom-jeans-mom/balance-seoul-a/mask.png":{"src":"assets/items/bottom-jeans-mom/balance-seoul-a/mask.webp","x":394,"y":543,"w":1024,"h":1536},"assets/items/bottom-shorts-cotton/balance-seoul-a/base.png":{"src":"assets/items/bottom-shorts-cotton/balance-seoul-a/base.webp","x":395,"y":543,"w":1024,"h":1536},"assets/items/bottom-shorts-cotton/balance-seoul-a/mask.png":{"src":"assets/items/bottom-shorts-cotton/balance-seoul-a/mask.webp","x":396,"y":544,"w":1024,"h":1536},"assets/items/bottom-jeans-baggy/balance-seoul-a/base.png":{"src":"assets/items/bottom-jeans-baggy/balance-seoul-a/base.webp","x":361,"y":607,"w":1024,"h":1536},"assets/items/bottom-jeans-baggy/balance-seoul-a/mask.png":{"src":"assets/items/bottom-jeans-baggy/balance-seoul-a/mask.webp","x":362,"y":608,"w":1024,"h":1536},"assets/items/bottom-jeans-flare/balance-seoul-a/base.png":{"src":"assets/items/bottom-jeans-flare/balance-seoul-a/base.webp","x":353,"y":564,"w":1024,"h":1536},"assets/items/bottom-jeans-flare/balance-seoul-a/mask.png":{"src":"assets/items/bottom-jeans-flare/balance-seoul-a/mask.webp","x":353,"y":565,"w":1024,"h":1536},"assets/items/bottom-jeans-white/balance-seoul-a/base.png":{"src":"assets/items/bottom-jeans-white/balance-seoul-a/base.webp","x":397,"y":525,"w":1024,"h":1536},"assets/items/bottom-jeans-white/balance-seoul-a/mask.png":{"src":"assets/items/bottom-jeans-white/balance-seoul-a/mask.webp","x":398,"y":527,"w":1024,"h":1536},"assets/items/bottom-denim-shorts/balance-seoul-a/base.png":{"src":"assets/items/bottom-denim-shorts/balance-seoul-a/base.webp","x":395,"y":542,"w":1024,"h":1536},"assets/items/bottom-denim-shorts/balance-seoul-a/mask.png":{"src":"assets/items/bottom-denim-shorts/balance-seoul-a/mask.webp","x":396,"y":543,"w":1024,"h":1536},"assets/items/dress-linen-light/balance-seoul-a/base.png":{"src":"assets/items/dress-linen-light/balance-seoul-a/base.webp","x":314,"y":287,"w":1024,"h":1536},"assets/items/dress-linen-light/balance-seoul-a/mask.png":{"src":"assets/items/dress-linen-light/balance-seoul-a/mask.webp","x":314,"y":288,"w":1024,"h":1536},"assets/items/dress-shirt/balance-seoul-a/base.png":{"src":"assets/items/dress-shirt/balance-seoul-a/base.webp","x":339,"y":256,"w":1024,"h":1536},"assets/items/dress-shirt/balance-seoul-a/mask.png":{"src":"assets/items/dress-shirt/balance-seoul-a/mask.webp","x":339,"y":257,"w":1024,"h":1536},"assets/items/dress-slip/balance-seoul-a/base.png":{"src":"assets/items/dress-slip/balance-seoul-a/base.webp","x":397,"y":295,"w":1024,"h":1536},"assets/items/dress-slip/balance-seoul-a/mask.png":{"src":"assets/items/dress-slip/balance-seoul-a/mask.webp","x":397,"y":295,"w":1024,"h":1536},"assets/items/dress-flare/balance-seoul-a/base.png":{"src":"assets/items/dress-flare/balance-seoul-a/base.webp","x":295,"y":287,"w":1024,"h":1536},"assets/items/dress-flare/balance-seoul-a/mask.png":{"src":"assets/items/dress-flare/balance-seoul-a/mask.webp","x":296,"y":288,"w":1024,"h":1536},"assets/items/outer-cardigan/balance-seoul-a/base.png":{"src":"assets/items/outer-cardigan/balance-seoul-a/base.webp","x":331,"y":286,"w":1024,"h":1536},"assets/items/outer-cardigan/balance-seoul-a/mask.png":{"src":"assets/items/outer-cardigan/balance-seoul-a/mask.webp","x":332,"y":287,"w":1024,"h":1536},"assets/items/outer-denim-jacket/balance-seoul-a/base.png":{"src":"assets/items/outer-denim-jacket/balance-seoul-a/base.webp","x":323,"y":267,"w":1024,"h":1536},"assets/items/outer-denim-jacket/balance-seoul-a/mask.png":{"src":"assets/items/outer-denim-jacket/balance-seoul-a/mask.webp","x":324,"y":268,"w":1024,"h":1536},"assets/items/outer-wool-coat/balance-seoul-a/base.png":{"src":"assets/items/outer-wool-coat/balance-seoul-a/base.webp","x":301,"y":255,"w":1024,"h":1536},"assets/items/outer-wool-coat/balance-seoul-a/back.png":{"src":"assets/items/outer-wool-coat/balance-seoul-a/back.webp","x":300,"y":512,"w":1024,"h":1536},"assets/items/outer-wool-coat/balance-seoul-a/mask.png":{"src":"assets/items/outer-wool-coat/balance-seoul-a/mask.webp","x":302,"y":256,"w":1024,"h":1536},"assets/items/shoes-sandal/balance-seoul-a/base.png":{"src":"assets/items/shoes-sandal/balance-seoul-a/base.webp","x":406,"y":1361,"w":1024,"h":1536},"assets/items/shoes-sandal/balance-seoul-a/mask.png":{"src":"assets/items/shoes-sandal/balance-seoul-a/mask.webp","x":407,"y":1362,"w":1024,"h":1536},"assets/items/shoes-ankle-boots/balance-seoul-a/base.png":{"src":"assets/items/shoes-ankle-boots/balance-seoul-a/base.webp","x":402,"y":1246,"w":1024,"h":1536},"assets/items/shoes-ankle-boots/balance-seoul-a/mask.png":{"src":"assets/items/shoes-ankle-boots/balance-seoul-a/mask.webp","x":402,"y":1247,"w":1024,"h":1536},"assets/items/shoes-pumps/balance-seoul-a/base.png":{"src":"assets/items/shoes-pumps/balance-seoul-a/base.webp","x":396,"y":1265,"w":1024,"h":1536},"assets/items/shoes-pumps/balance-seoul-a/mask.png":{"src":"assets/items/shoes-pumps/balance-seoul-a/mask.webp","x":396,"y":1266,"w":1024,"h":1536},"assets/items/shoes-maryjane/balance-seoul-a/base.png":{"src":"assets/items/shoes-maryjane/balance-seoul-a/base.webp","x":404,"y":1355,"w":1024,"h":1536},"assets/items/shoes-maryjane/balance-seoul-a/mask.png":{"src":"assets/items/shoes-maryjane/balance-seoul-a/mask.webp","x":405,"y":1356,"w":1024,"h":1536},"assets/items/bag-tote/balance-seoul-a/base.png":{"src":"assets/items/bag-tote/balance-seoul-a/base.webp","x":237,"y":790,"w":1024,"h":1536},"assets/items/bag-tote/balance-seoul-a/mask.png":{"src":"assets/items/bag-tote/balance-seoul-a/mask.webp","x":238,"y":791,"w":1024,"h":1536},"assets/items/bag-tote/balance-seoul-a/protect.png":{"src":"assets/items/bag-tote/balance-seoul-a/protect.webp","x":237,"y":790,"w":1024,"h":1536},"assets/items/bag-crossbody/balance-seoul-a/base.png":{"src":"assets/items/bag-crossbody/balance-seoul-a/base.webp","x":425,"y":291,"w":1024,"h":1536},"assets/items/bag-crossbody/balance-seoul-a/mask.png":{"src":"assets/items/bag-crossbody/balance-seoul-a/mask.webp","x":426,"y":292,"w":1024,"h":1536},"assets/items/bag-crossbody/balance-seoul-a/protect.png":{"src":"assets/items/bag-crossbody/balance-seoul-a/protect.webp","x":565,"y":574,"w":1024,"h":1536},"assets/items/bag-rattan/balance-seoul-a/base.png":{"src":"assets/items/bag-rattan/balance-seoul-a/base.webp","x":277,"y":515,"w":1024,"h":1536},"assets/items/bag-rattan/balance-seoul-a/mask.png":{"src":"assets/items/bag-rattan/balance-seoul-a/mask.webp","x":277,"y":516,"w":1024,"h":1536},"assets/items/bag-rattan/balance-seoul-a/protect.png":{"src":"assets/items/bag-rattan/balance-seoul-a/protect.webp","x":277,"y":515,"w":1024,"h":1536},"assets/items/acc-cap/balance-seoul-a/base.png":{"src":"assets/items/acc-cap/balance-seoul-a/base.webp","x":421,"y":36,"w":1024,"h":1536},"assets/items/acc-cap/balance-seoul-a/mask.png":{"src":"assets/items/acc-cap/balance-seoul-a/mask.webp","x":422,"y":37,"w":1024,"h":1536},"assets/items/acc-cap/balance-seoul-a/protect.png":{"src":"assets/items/acc-cap/balance-seoul-a/protect.webp","x":421,"y":36,"w":1024,"h":1536},"assets/items/acc-sunglasses/balance-seoul-a/base.png":{"src":"assets/items/acc-sunglasses/balance-seoul-a/base.webp","x":421,"y":103,"w":1024,"h":1536},"assets/items/acc-sunglasses/balance-seoul-a/mask.png":{"src":"assets/items/acc-sunglasses/balance-seoul-a/mask.webp","x":422,"y":105,"w":1024,"h":1536},"assets/items/acc-sunglasses/balance-seoul-a/protect.png":{"src":"assets/items/acc-sunglasses/balance-seoul-a/protect.webp","x":421,"y":103,"w":1024,"h":1536},"assets/items/acc-pearl-necklace/balance-seoul-a/base.png":{"src":"assets/items/acc-pearl-necklace/balance-seoul-a/base.webp","x":421,"y":36,"w":1024,"h":1536},"assets/items/acc-pearl-necklace/balance-seoul-a/mask.png":{"src":"assets/items/acc-pearl-necklace/balance-seoul-a/mask.webp","x":422,"y":37,"w":1024,"h":1536},"assets/items/acc-pearl-necklace/balance-seoul-a/protect.png":{"src":"assets/items/acc-pearl-necklace/balance-seoul-a/protect.webp","x":422,"y":36,"w":1024,"h":1536},"assets/items/acc-gold-earrings/balance-seoul-a/base.png":{"src":"assets/items/acc-gold-earrings/balance-seoul-a/base.webp","x":419,"y":114,"w":1024,"h":1536},"assets/items/acc-gold-earrings/balance-seoul-a/mask.png":{"src":"assets/items/acc-gold-earrings/balance-seoul-a/mask.webp","x":420,"y":115,"w":1024,"h":1536},"assets/items/acc-gold-earrings/balance-seoul-a/protect.png":{"src":"assets/items/acc-gold-earrings/balance-seoul-a/protect.webp","x":419,"y":114,"w":1024,"h":1536},"assets/items/acc-scarf/balance-seoul-a/base.png":{"src":"assets/items/acc-scarf/balance-seoul-a/base.webp","x":450,"y":250,"w":1024,"h":1536},"assets/items/acc-scarf/balance-seoul-a/mask.png":{"src":"assets/items/acc-scarf/balance-seoul-a/mask.webp","x":451,"y":251,"w":1024,"h":1536},"assets/items/acc-scarf/balance-seoul-a/protect.png":{"src":"assets/items/acc-scarf/balance-seoul-a/protect.webp","x":457,"y":250,"w":1024,"h":1536},"assets/items/acc-hair-ribbon/balance-seoul-a/base.png":{"src":"assets/items/acc-hair-ribbon/balance-seoul-a/base.webp","x":421,"y":36,"w":1024,"h":1536},"assets/items/acc-hair-ribbon/balance-seoul-a/mask.png":{"src":"assets/items/acc-hair-ribbon/balance-seoul-a/mask.webp","x":422,"y":38,"w":1024,"h":1536},"assets/items/acc-hair-ribbon/balance-seoul-a/protect.png":{"src":"assets/items/acc-hair-ribbon/balance-seoul-a/protect.webp","x":422,"y":36,"w":1024,"h":1536},"assets/items/seoul-cami-crop/balance-seoul-a/base.png":{"src":"assets/items/seoul-cami-crop/balance-seoul-a/base.webp","x":417,"y":299,"w":1024,"h":1536},"assets/items/seoul-cami-crop/balance-seoul-a/mask.png":{"src":"assets/items/seoul-cami-crop/balance-seoul-a/mask.webp","x":418,"y":300,"w":1024,"h":1536},"assets/items/seoul-cami-crop/balance-r2/base.png":{"src":"assets/items/seoul-cami-crop/balance-r2/base.webp","x":401,"y":306,"w":1024,"h":1536},"assets/items/seoul-cami-crop/balance-r2/mask.png":{"src":"assets/items/seoul-cami-crop/balance-r2/mask.webp","x":403,"y":307,"w":1024,"h":1536},"assets/items/seoul-fluffy-cardigan/balance-seoul-a/base.png":{"src":"assets/items/seoul-fluffy-cardigan/balance-seoul-a/base.webp","x":297,"y":290,"w":1024,"h":1536},"assets/items/seoul-fluffy-cardigan/balance-seoul-a/mask.png":{"src":"assets/items/seoul-fluffy-cardigan/balance-seoul-a/mask.webp","x":298,"y":291,"w":1024,"h":1536},"assets/items/seoul-fluffy-cardigan/balance-r2/base.png":{"src":"assets/items/seoul-fluffy-cardigan/balance-r2/base.webp","x":273,"y":280,"w":1024,"h":1536},"assets/items/seoul-fluffy-cardigan/balance-r2/mask.png":{"src":"assets/items/seoul-fluffy-cardigan/balance-r2/mask.webp","x":274,"y":281,"w":1024,"h":1536},"assets/items/seoul-wide-denim/balance-seoul-a/base.png":{"src":"assets/items/seoul-wide-denim/balance-seoul-a/base.webp","x":381,"y":600,"w":1024,"h":1536},"assets/items/seoul-wide-denim/balance-seoul-a/mask.png":{"src":"assets/items/seoul-wide-denim/balance-seoul-a/mask.webp","x":381,"y":602,"w":1024,"h":1536},"assets/items/seoul-wide-denim/balance-r2/base.png":{"src":"assets/items/seoul-wide-denim/balance-r2/base.webp","x":339,"y":614,"w":1024,"h":1536},"assets/items/seoul-wide-denim/balance-r2/mask.png":{"src":"assets/items/seoul-wide-denim/balance-r2/mask.webp","x":339,"y":615,"w":1024,"h":1536},"assets/items/seoul-leather-tote/balance-seoul-a/base.png":{"src":"assets/items/seoul-leather-tote/balance-seoul-a/base.webp","x":398,"y":292,"w":1024,"h":1536},"assets/items/seoul-leather-tote/balance-seoul-a/mask.png":{"src":"assets/items/seoul-leather-tote/balance-seoul-a/mask.webp","x":399,"y":293,"w":1024,"h":1536},"assets/items/seoul-leather-tote/balance-seoul-a/protect.png":{"src":"assets/items/seoul-leather-tote/balance-seoul-a/protect.webp","x":401,"y":435,"w":1024,"h":1536},"assets/items/seoul-leather-tote/balance-r2/base.png":{"src":"assets/items/seoul-leather-tote/balance-r2/base.webp","x":546,"y":301,"w":1024,"h":1536},"assets/items/seoul-leather-tote/balance-r2/mask.png":{"src":"assets/items/seoul-leather-tote/balance-r2/mask.webp","x":547,"y":302,"w":1024,"h":1536},"assets/items/seoul-leather-tote/balance-r2/protect.png":{"src":"assets/items/seoul-leather-tote/balance-r2/protect.webp","x":602,"y":426,"w":1024,"h":1536},"assets/items/seoul-chunky-sneakers/balance-seoul-a/base.png":{"src":"assets/items/seoul-chunky-sneakers/balance-seoul-a/base.webp","x":392,"y":1251,"w":1024,"h":1536},"assets/items/seoul-chunky-sneakers/balance-seoul-a/mask.png":{"src":"assets/items/seoul-chunky-sneakers/balance-seoul-a/mask.webp","x":392,"y":1255,"w":1024,"h":1536},"assets/items/seoul-chunky-sneakers/balance-r2/base.png":{"src":"assets/items/seoul-chunky-sneakers/balance-r2/base.webp","x":385,"y":1322,"w":1024,"h":1536},"assets/items/seoul-chunky-sneakers/balance-r2/mask.png":{"src":"assets/items/seoul-chunky-sneakers/balance-r2/mask.webp","x":386,"y":1323,"w":1024,"h":1536},"assets/items/seoul-offshoulder-knit/balance-seoul-a/base.png":{"src":"assets/items/seoul-offshoulder-knit/balance-seoul-a/base.webp","x":335,"y":346,"w":1024,"h":1536},"assets/items/seoul-offshoulder-knit/balance-seoul-a/mask.png":{"src":"assets/items/seoul-offshoulder-knit/balance-seoul-a/mask.webp","x":335,"y":347,"w":1024,"h":1536},"assets/items/seoul-offshoulder-knit/balance-r2/base.png":{"src":"assets/items/seoul-offshoulder-knit/balance-r2/base.webp","x":317,"y":356,"w":1024,"h":1536},"assets/items/seoul-offshoulder-knit/balance-r2/mask.png":{"src":"assets/items/seoul-offshoulder-knit/balance-r2/mask.webp","x":318,"y":357,"w":1024,"h":1536},"assets/items/seoul-tweed-jacket/balance-seoul-a/base.png":{"src":"assets/items/seoul-tweed-jacket/balance-seoul-a/base.webp","x":319,"y":281,"w":1024,"h":1536},"assets/items/seoul-tweed-jacket/balance-seoul-a/mask.png":{"src":"assets/items/seoul-tweed-jacket/balance-seoul-a/mask.webp","x":320,"y":282,"w":1024,"h":1536},"assets/items/seoul-tweed-jacket/balance-r2/base.png":{"src":"assets/items/seoul-tweed-jacket/balance-r2/base.webp","x":298,"y":282,"w":1024,"h":1536},"assets/items/seoul-tweed-jacket/balance-r2/mask.png":{"src":"assets/items/seoul-tweed-jacket/balance-r2/mask.webp","x":299,"y":283,"w":1024,"h":1536},"assets/items/seoul-denim-mini/balance-seoul-a/base.png":{"src":"assets/items/seoul-denim-mini/balance-seoul-a/base.webp","x":383,"y":522,"w":1024,"h":1536},"assets/items/seoul-denim-mini/balance-seoul-a/mask.png":{"src":"assets/items/seoul-denim-mini/balance-seoul-a/mask.webp","x":383,"y":523,"w":1024,"h":1536},"assets/items/seoul-denim-mini/balance-r2/base.png":{"src":"assets/items/seoul-denim-mini/balance-r2/base.webp","x":356,"y":551,"w":1024,"h":1536},"assets/items/seoul-denim-mini/balance-r2/mask.png":{"src":"assets/items/seoul-denim-mini/balance-r2/mask.webp","x":358,"y":552,"w":1024,"h":1536},"assets/items/seoul-satin-slip/balance-seoul-a/base.png":{"src":"assets/items/seoul-satin-slip/balance-seoul-a/base.webp","x":389,"y":299,"w":1024,"h":1536},"assets/items/seoul-satin-slip/balance-seoul-a/mask.png":{"src":"assets/items/seoul-satin-slip/balance-seoul-a/mask.webp","x":390,"y":300,"w":1024,"h":1536},"assets/items/seoul-satin-slip/balance-r2/base.png":{"src":"assets/items/seoul-satin-slip/balance-r2/base.webp","x":359,"y":302,"w":1024,"h":1536},"assets/items/seoul-satin-slip/balance-r2/mask.png":{"src":"assets/items/seoul-satin-slip/balance-r2/mask.webp","x":360,"y":303,"w":1024,"h":1536},"assets/items/seoul-ballet-flats/balance-seoul-a/base.png":{"src":"assets/items/seoul-ballet-flats/balance-seoul-a/base.webp","x":409,"y":1305,"w":1024,"h":1536},"assets/items/seoul-ballet-flats/balance-seoul-a/mask.png":{"src":"assets/items/seoul-ballet-flats/balance-seoul-a/mask.webp","x":409,"y":1306,"w":1024,"h":1536},"assets/items/seoul-ballet-flats/balance-r2/base.png":{"src":"assets/items/seoul-ballet-flats/balance-r2/base.webp","x":400,"y":1414,"w":1024,"h":1536},"assets/items/seoul-ballet-flats/balance-r2/mask.png":{"src":"assets/items/seoul-ballet-flats/balance-r2/mask.webp","x":400,"y":1415,"w":1024,"h":1536},"assets/items/seoul-mini-shoulder-pink/balance-seoul-a/base.png":{"src":"assets/items/seoul-mini-shoulder-pink/balance-seoul-a/base.webp","x":380,"y":290,"w":1024,"h":1536},"assets/items/seoul-mini-shoulder-pink/balance-seoul-a/mask.png":{"src":"assets/items/seoul-mini-shoulder-pink/balance-seoul-a/mask.webp","x":382,"y":291,"w":1024,"h":1536},"assets/items/seoul-mini-shoulder-pink/balance-seoul-a/protect.png":{"src":"assets/items/seoul-mini-shoulder-pink/balance-seoul-a/protect.webp","x":380,"y":290,"w":1024,"h":1536},"assets/items/seoul-mini-shoulder-pink/balance-r2/base.png":{"src":"assets/items/seoul-mini-shoulder-pink/balance-r2/base.webp","x":578,"y":301,"w":1024,"h":1536},"assets/items/seoul-mini-shoulder-pink/balance-r2/mask.png":{"src":"assets/items/seoul-mini-shoulder-pink/balance-r2/mask.webp","x":579,"y":302,"w":1024,"h":1536},"assets/items/seoul-mini-shoulder-pink/balance-r2/protect.png":{"src":"assets/items/seoul-mini-shoulder-pink/balance-r2/protect.webp","x":581,"y":301,"w":1024,"h":1536},"assets/items/seoul-hair-claw/balance-seoul-a/base.png":{"src":"assets/items/seoul-hair-claw/balance-seoul-a/base.webp","x":426,"y":36,"w":1024,"h":1536},"assets/items/seoul-hair-claw/balance-seoul-a/mask.png":{"src":"assets/items/seoul-hair-claw/balance-seoul-a/mask.webp","x":427,"y":37,"w":1024,"h":1536},"assets/items/seoul-hair-claw/balance-seoul-a/protect.png":{"src":"assets/items/seoul-hair-claw/balance-seoul-a/protect.webp","x":426,"y":36,"w":1024,"h":1536},"assets/items/seoul-hair-claw/balance-r2/base.png":{"src":"assets/items/seoul-hair-claw/balance-r2/base.webp","x":520,"y":36,"w":1024,"h":1536},"assets/items/seoul-hair-claw/balance-r2/mask.png":{"src":"assets/items/seoul-hair-claw/balance-r2/mask.webp","x":521,"y":37,"w":1024,"h":1536},"assets/items/seoul-hair-claw/balance-r2/protect.png":{"src":"assets/items/seoul-hair-claw/balance-r2/protect.webp","x":534,"y":37,"w":1024,"h":1536},"assets/thumbs/top-tshirt-basic.webp":"assets/thumbs/top-tshirt-basic.webp","assets/thumbs/top-blouse-basic.webp":"assets/thumbs/top-blouse-basic.webp","assets/thumbs/bottom-denim-wide.webp":"assets/thumbs/bottom-denim-wide.webp","assets/thumbs/shoes-sneaker-white.webp":"assets/thumbs/shoes-sneaker-white.webp","assets/thumbs/top-shirt-white.webp":"assets/thumbs/top-shirt-white.webp","assets/thumbs/outer-blazer.webp":"assets/thumbs/outer-blazer.webp","assets/thumbs/outer-trench.webp":"assets/thumbs/outer-trench.webp","assets/thumbs/bottom-mini-skirt.webp":"assets/thumbs/bottom-mini-skirt.webp","assets/thumbs/shoes-loafer.webp":"assets/thumbs/shoes-loafer.webp","assets/thumbs/bag-shoulder-small.webp":"assets/thumbs/bag-shoulder-small.webp","assets/thumbs/top-stripe-tee.webp":"assets/thumbs/top-stripe-tee.webp","assets/thumbs/top-knit-crew.webp":"assets/thumbs/top-knit-crew.webp","assets/thumbs/top-turtleneck.webp":"assets/thumbs/top-turtleneck.webp","assets/thumbs/top-sweatshirt.webp":"assets/thumbs/top-sweatshirt.webp","assets/thumbs/top-knit-sleeveless.webp":"assets/thumbs/top-knit-sleeveless.webp","assets/thumbs/top-longsleeve-slim.webp":"assets/thumbs/top-longsleeve-slim.webp","assets/thumbs/bottom-midi-skirt.webp":"assets/thumbs/bottom-midi-skirt.webp","assets/thumbs/bottom-slacks.webp":"assets/thumbs/bottom-slacks.webp","assets/thumbs/bottom-jeans-straight.webp":"assets/thumbs/bottom-jeans-straight.webp","assets/thumbs/bottom-jeans-bootcut.webp":"assets/thumbs/bottom-jeans-bootcut.webp","assets/thumbs/bottom-jeans-skinny.webp":"assets/thumbs/bottom-jeans-skinny.webp","assets/thumbs/bottom-jeans-mom.webp":"assets/thumbs/bottom-jeans-mom.webp","assets/thumbs/bottom-shorts-cotton.webp":"assets/thumbs/bottom-shorts-cotton.webp","assets/thumbs/bottom-jeans-baggy.webp":"assets/thumbs/bottom-jeans-baggy.webp","assets/thumbs/bottom-jeans-flare.webp":"assets/thumbs/bottom-jeans-flare.webp","assets/thumbs/bottom-jeans-white.webp":"assets/thumbs/bottom-jeans-white.webp","assets/thumbs/bottom-denim-shorts.webp":"assets/thumbs/bottom-denim-shorts.webp","assets/thumbs/dress-linen-light.webp":"assets/thumbs/dress-linen-light.webp","assets/thumbs/dress-shirt.webp":"assets/thumbs/dress-shirt.webp","assets/thumbs/dress-slip.webp":"assets/thumbs/dress-slip.webp","assets/thumbs/dress-flare.webp":"assets/thumbs/dress-flare.webp","assets/thumbs/outer-cardigan.webp":"assets/thumbs/outer-cardigan.webp","assets/thumbs/outer-denim-jacket.webp":"assets/thumbs/outer-denim-jacket.webp","assets/thumbs/outer-wool-coat.webp":"assets/thumbs/outer-wool-coat.webp","assets/thumbs/shoes-sandal.webp":"assets/thumbs/shoes-sandal.webp","assets/thumbs/shoes-ankle-boots.webp":"assets/thumbs/shoes-ankle-boots.webp","assets/thumbs/shoes-pumps.webp":"assets/thumbs/shoes-pumps.webp","assets/thumbs/shoes-maryjane.webp":"assets/thumbs/shoes-maryjane.webp","assets/thumbs/bag-tote.webp":"assets/thumbs/bag-tote.webp","assets/thumbs/bag-crossbody.webp":"assets/thumbs/bag-crossbody.webp","assets/thumbs/bag-rattan.webp":"assets/thumbs/bag-rattan.webp","assets/thumbs/acc-cap.webp":"assets/thumbs/acc-cap.webp","assets/thumbs/acc-sunglasses.webp":"assets/thumbs/acc-sunglasses.webp","assets/thumbs/acc-pearl-necklace.webp":"assets/thumbs/acc-pearl-necklace.webp","assets/thumbs/acc-gold-earrings.webp":"assets/thumbs/acc-gold-earrings.webp","assets/thumbs/acc-scarf.webp":"assets/thumbs/acc-scarf.webp","assets/thumbs/acc-hair-ribbon.webp":"assets/thumbs/acc-hair-ribbon.webp","assets/thumbs/seoul-cami-crop.webp":"assets/thumbs/seoul-cami-crop.webp","assets/thumbs/seoul-fluffy-cardigan.webp":"assets/thumbs/seoul-fluffy-cardigan.webp","assets/thumbs/seoul-wide-denim.webp":"assets/thumbs/seoul-wide-denim.webp","assets/thumbs/seoul-leather-tote.webp":"assets/thumbs/seoul-leather-tote.webp","assets/thumbs/seoul-chunky-sneakers.webp":"assets/thumbs/seoul-chunky-sneakers.webp","assets/thumbs/seoul-offshoulder-knit.webp":"assets/thumbs/seoul-offshoulder-knit.webp","assets/thumbs/seoul-tweed-jacket.webp":"assets/thumbs/seoul-tweed-jacket.webp","assets/thumbs/seoul-denim-mini.webp":"assets/thumbs/seoul-denim-mini.webp","assets/thumbs/seoul-satin-slip.webp":"assets/thumbs/seoul-satin-slip.webp","assets/thumbs/seoul-ballet-flats.webp":"assets/thumbs/seoul-ballet-flats.webp","assets/thumbs/seoul-mini-shoulder-pink.webp":"assets/thumbs/seoul-mini-shoulder-pink.webp","assets/thumbs/seoul-hair-claw.webp":"assets/thumbs/seoul-hair-claw.webp","assets/scenes/dressroom/bg.png":{"src":"assets/scenes/dressroom/bg.webp","x":0,"y":0,"w":1024,"h":1536},"assets/scenes/seongsu-cafe-late-afternoon/bg.png":{"src":"assets/scenes/seongsu-cafe-late-afternoon/bg.webp","x":0,"y":0,"w":1024,"h":1536},"assets/scenes/hangang-sunset/bg.png":{"src":"assets/scenes/hangang-sunset/bg.webp","x":0,"y":0,"w":1024,"h":1536},"assets/scenes/seongsu-cafe-night/bg.png":{"src":"assets/scenes/seongsu-cafe-night/bg.webp","x":0,"y":0,"w":1024,"h":1536},"assets/scenes/seongsu-cafe-rain/bg.png":{"src":"assets/scenes/seongsu-cafe-rain/bg.webp","x":0,"y":0,"w":1024,"h":1536},"assets/scenes/hangang-night/bg.png":{"src":"assets/scenes/hangang-night/bg.webp","x":0,"y":0,"w":1024,"h":1536},"assets/scenes/yeonnam-forest-day/bg.png":{"src":"assets/scenes/yeonnam-forest-day/bg.webp","x":0,"y":0,"w":1024,"h":1536},"assets/scenes/bukchon-hanok-afternoon/bg.png":{"src":"assets/scenes/bukchon-hanok-afternoon/bg.webp","x":0,"y":0,"w":1024,"h":1536},"assets/scenes/euljiro-alley-night/bg.png":{"src":"assets/scenes/euljiro-alley-night/bg.webp","x":0,"y":0,"w":1024,"h":1536},"assets/scenes/namsan-view-evening/bg.png":{"src":"assets/scenes/namsan-view-evening/bg.webp","x":0,"y":0,"w":1024,"h":1536},"assets/scenes/garosu-street-cloudy/bg.png":{"src":"assets/scenes/garosu-street-cloudy/bg.webp","x":0,"y":0,"w":1024,"h":1536},"assets/face/closeup-base.png":{"src":"assets/face/closeup-base.webp","x":0,"y":0,"w":1254,"h":1254},"assets/face/closeup-hair-mask.png":{"src":"assets/face/closeup-hair-mask.webp","x":309,"y":5,"w":1254,"h":1254},"assets/face/eyes/eye-02/closeup.png":{"src":"assets/face/eyes/eye-02/closeup.webp","x":0,"y":0,"w":509,"h":209},"assets/face/eyes/eye-02/body.png":{"src":"assets/face/eyes/eye-02/body.webp","x":0,"y":0,"w":143,"h":60},"assets/face/eyes/eye-03/closeup.png":{"src":"assets/face/eyes/eye-03/closeup.webp","x":0,"y":0,"w":509,"h":209},"assets/face/eyes/eye-03/body.png":{"src":"assets/face/eyes/eye-03/body.webp","x":0,"y":0,"w":143,"h":60},"assets/face/eyes/eye-04/closeup.png":{"src":"assets/face/eyes/eye-04/closeup.webp","x":0,"y":0,"w":509,"h":209},"assets/face/eyes/eye-04/body.png":{"src":"assets/face/eyes/eye-04/body.webp","x":0,"y":0,"w":143,"h":60},"assets/face/eyes/eye-05/closeup.png":{"src":"assets/face/eyes/eye-05/closeup.webp","x":0,"y":0,"w":509,"h":209},"assets/face/eyes/eye-05/body.png":{"src":"assets/face/eyes/eye-05/body.webp","x":0,"y":0,"w":143,"h":60},"assets/face/eyes/eye-06/closeup.png":{"src":"assets/face/eyes/eye-06/closeup.webp","x":0,"y":0,"w":509,"h":209},"assets/face/eyes/eye-06/body.png":{"src":"assets/face/eyes/eye-06/body.webp","x":0,"y":0,"w":143,"h":60},"assets/face/eyes/eye-07/closeup.png":{"src":"assets/face/eyes/eye-07/closeup.webp","x":0,"y":0,"w":509,"h":209},"assets/face/eyes/eye-07/body.png":{"src":"assets/face/eyes/eye-07/body.webp","x":0,"y":0,"w":143,"h":60},"assets/face/eyes/eye-08/closeup.png":{"src":"assets/face/eyes/eye-08/closeup.webp","x":0,"y":0,"w":509,"h":209},"assets/face/eyes/eye-08/body.png":{"src":"assets/face/eyes/eye-08/body.webp","x":0,"y":0,"w":143,"h":60},"assets/face/eyes/eye-09/closeup.png":{"src":"assets/face/eyes/eye-09/closeup.webp","x":0,"y":0,"w":509,"h":209},"assets/face/eyes/eye-09/body.png":{"src":"assets/face/eyes/eye-09/body.webp","x":0,"y":0,"w":143,"h":60},"assets/face/eyes/eye-10/closeup.png":{"src":"assets/face/eyes/eye-10/closeup.webp","x":0,"y":0,"w":509,"h":209},"assets/face/eyes/eye-10/body.png":{"src":"assets/face/eyes/eye-10/body.webp","x":0,"y":0,"w":143,"h":60},"assets/face/brows/brow-02/closeup.png":{"src":"assets/face/brows/brow-02/closeup.webp","x":0,"y":0,"w":477,"h":129},"assets/face/brows/brow-02/body.png":{"src":"assets/face/brows/brow-02/body.webp","x":0,"y":0,"w":134,"h":38},"assets/face/brows/brow-03/closeup.png":{"src":"assets/face/brows/brow-03/closeup.webp","x":0,"y":0,"w":477,"h":129},"assets/face/brows/brow-03/body.png":{"src":"assets/face/brows/brow-03/body.webp","x":0,"y":0,"w":134,"h":38},"assets/face/brows/brow-04/closeup.png":{"src":"assets/face/brows/brow-04/closeup.webp","x":0,"y":0,"w":477,"h":129},"assets/face/brows/brow-04/body.png":{"src":"assets/face/brows/brow-04/body.webp","x":0,"y":0,"w":134,"h":38},"assets/face/brows/brow-05/closeup.png":{"src":"assets/face/brows/brow-05/closeup.webp","x":0,"y":0,"w":477,"h":129},"assets/face/brows/brow-05/body.png":{"src":"assets/face/brows/brow-05/body.webp","x":0,"y":0,"w":134,"h":38},"assets/face/brows/brow-06/closeup.png":{"src":"assets/face/brows/brow-06/closeup.webp","x":0,"y":0,"w":477,"h":129},"assets/face/brows/brow-06/body.png":{"src":"assets/face/brows/brow-06/body.webp","x":0,"y":0,"w":134,"h":38},"assets/face/brows/brow-07/closeup.png":{"src":"assets/face/brows/brow-07/closeup.webp","x":0,"y":0,"w":477,"h":129},"assets/face/brows/brow-07/body.png":{"src":"assets/face/brows/brow-07/body.webp","x":0,"y":0,"w":134,"h":38},"assets/face/brows/brow-08/closeup.png":{"src":"assets/face/brows/brow-08/closeup.webp","x":0,"y":0,"w":477,"h":129},"assets/face/brows/brow-08/body.png":{"src":"assets/face/brows/brow-08/body.webp","x":0,"y":0,"w":134,"h":38},"assets/face/lips/lip-02/closeup.png":{"src":"assets/face/lips/lip-02/closeup.webp","x":0,"y":0,"w":253,"h":181},"assets/face/lips/lip-02/body.png":{"src":"assets/face/lips/lip-02/body.webp","x":0,"y":0,"w":73,"h":52},"assets/face/lips/lip-03/closeup.png":{"src":"assets/face/lips/lip-03/closeup.webp","x":0,"y":0,"w":253,"h":181},"assets/face/lips/lip-03/body.png":{"src":"assets/face/lips/lip-03/body.webp","x":0,"y":0,"w":73,"h":52},"assets/face/lips/lip-04/closeup.png":{"src":"assets/face/lips/lip-04/closeup.webp","x":0,"y":0,"w":253,"h":181},"assets/face/lips/lip-04/body.png":{"src":"assets/face/lips/lip-04/body.webp","x":0,"y":0,"w":73,"h":52},"assets/face/lips/lip-05/closeup.png":{"src":"assets/face/lips/lip-05/closeup.webp","x":0,"y":0,"w":253,"h":181},"assets/face/lips/lip-05/body.png":{"src":"assets/face/lips/lip-05/body.webp","x":0,"y":0,"w":73,"h":52},"assets/face/lips/lip-06/closeup.png":{"src":"assets/face/lips/lip-06/closeup.webp","x":0,"y":0,"w":253,"h":181},"assets/face/lips/lip-06/body.png":{"src":"assets/face/lips/lip-06/body.webp","x":0,"y":0,"w":73,"h":52},"assets/face/lips/lip-07/closeup.png":{"src":"assets/face/lips/lip-07/closeup.webp","x":0,"y":0,"w":253,"h":181},"assets/face/lips/lip-07/body.png":{"src":"assets/face/lips/lip-07/body.webp","x":0,"y":0,"w":73,"h":52},"assets/face/lips/lip-08/closeup.png":{"src":"assets/face/lips/lip-08/closeup.webp","x":0,"y":0,"w":253,"h":181},"assets/face/lips/lip-08/body.png":{"src":"assets/face/lips/lip-08/body.webp","x":0,"y":0,"w":73,"h":52},"assets/face/nose/nose-02/closeup.png":{"src":"assets/face/nose/nose-02/closeup.webp","x":0,"y":0,"w":169,"h":187},"assets/face/nose/nose-02/body.png":{"src":"assets/face/nose/nose-02/body.webp","x":0,"y":0,"w":49,"h":54},"assets/face/nose/nose-03/closeup.png":{"src":"assets/face/nose/nose-03/closeup.webp","x":0,"y":0,"w":169,"h":187},"assets/face/nose/nose-03/body.png":{"src":"assets/face/nose/nose-03/body.webp","x":0,"y":0,"w":49,"h":54},"assets/face/nose/nose-04/closeup.png":{"src":"assets/face/nose/nose-04/closeup.webp","x":0,"y":0,"w":169,"h":187},"assets/face/nose/nose-04/body.png":{"src":"assets/face/nose/nose-04/body.webp","x":0,"y":0,"w":49,"h":54}};</script>
   <script>
 // ── src/data/app-config.js
 // 앱 전체 설정. 앱 이름·검증 단계는 화면 코드가 아니라 여기서만 정한다.
@@ -533,7 +533,7 @@ DYS.bases = [
     // r2: 원화_입고/1-1_기준인물_밸런스.png(ChatGPT, 단색 초록 배경) → tools/chroma_key.py로 배경 제거.
     // 2026-09-29 사용자 승인 → 모든 옷·얼굴 부위의 기준으로 고정. 이 파일을 바꾸면 baseRevision도 올린다.
     status: 'ready',
-    asset: { src: 'assets/bases/balance-front-neutral/r2/base.png', hairMask: 'assets/bases/balance-front-neutral/r2/hair-mask.png' },
+    asset: { src: 'assets/bases/balance-front-neutral/r2/base.png', covered: 'assets/bases/balance-front-neutral/r2/base-covered.png', hairMask: 'assets/bases/balance-front-neutral/r2/hair-mask.png' },
   },
   // 슬림·볼륨 체형은 09-29 사용자 결정으로 뺌(그림은 ../보관_체형/에 보관)
   // 서울 테마 자세 A: 원화_입고/5-1_서울포즈A_밸런스.png(1-1을 첨부해 자세만 바꿔 받음) → chroma_key → clean_specks
@@ -547,7 +547,7 @@ DYS.bases = [
     status: 'ready',
     faceParts: false,
     // hairMask: 머리카락 픽셀(tools/hair_mask_from_colors.py, 피부·눈·눈썹 제외) — 머리색은 이 영역만 칠한다
-    asset: { src: 'assets/bases/balance-seoul-a/r1/base.png', hairMask: 'assets/bases/balance-seoul-a/r1/hair-mask.png' },
+    asset: { src: 'assets/bases/balance-seoul-a/r1/base.png', covered: 'assets/bases/balance-seoul-a/r1/base-covered.png', hairMask: 'assets/bases/balance-seoul-a/r1/hair-mask.png' },
   },
 ];
 
@@ -715,9 +715,9 @@ DYS.wardrobe = [
     status: 'unverified',
     // 원화_입고/3-7b_트렌치코트_차콜티위_밸런스.png(차콜 티 합성 위에 걸침) → garment_part.py, 슬림·볼륨은 fit_warp.py(outer)
     fits: [
-      { baseId: 'balance-front-neutral', status: 'unverified', asset: { src: 'assets/items/outer-trench/balance-r2/base.png', mask: 'assets/items/outer-trench/balance-r2/mask.png' } },
+      { baseId: 'balance-front-neutral', status: 'unverified', asset: { src: 'assets/items/outer-trench/balance-r2/base.png', back: 'assets/items/outer-trench/balance-r2/back.png', mask: 'assets/items/outer-trench/balance-r2/mask.png' } },
       // balance-seoul-a: 원화_입고/7-17_포즈A_롱트렌치코트.png
-      { baseId: 'balance-seoul-a', status: 'unverified', asset: { src: 'assets/items/outer-trench/balance-seoul-a/base.png', mask: 'assets/items/outer-trench/balance-seoul-a/mask.png' } },
+      { baseId: 'balance-seoul-a', status: 'unverified', asset: { src: 'assets/items/outer-trench/balance-seoul-a/base.png', back: 'assets/items/outer-trench/balance-seoul-a/back.png', mask: 'assets/items/outer-trench/balance-seoul-a/mask.png' } },
     ],
     colorways: [
       { colorwayId: 'beige', label: '베이지', hex: '#d9c4a0', mode: 'original', status: 'unverified' },
@@ -860,6 +860,8 @@ DYS.wardrobe = [
     // 원화_입고/7-07_포즈A_슬리브리스니트탑.png (첨부: 0_요청용_포즈A_짙은속옷.png) → tools/pose_queue.py ingest
     fits: [
       { baseId: 'balance-seoul-a', status: 'unverified', asset: { src: 'assets/items/top-knit-sleeveless/balance-seoul-a/base.png', mask: 'assets/items/top-knit-sleeveless/balance-seoul-a/mask.png' } },
+      // balance-front-neutral: 원화_입고/8-07_정면_슬리브리스니트탑.png
+      { baseId: 'balance-front-neutral', status: 'unverified', asset: { src: 'assets/items/top-knit-sleeveless/balance-r2/base.png', mask: 'assets/items/top-knit-sleeveless/balance-r2/mask.png' } },
     ],
     colorways: [
       { colorwayId: 'ivory', label: '아이보리', hex: '#ece5d6', mode: 'original', status: 'unverified' },
@@ -873,6 +875,8 @@ DYS.wardrobe = [
     // 원화_입고/7-03_포즈A_슬림긴팔탑.png (첨부: 5-1_서울포즈A_밸런스.png) → tools/pose_queue.py ingest
     fits: [
       { baseId: 'balance-seoul-a', status: 'unverified', asset: { src: 'assets/items/top-longsleeve-slim/balance-seoul-a/base.png', mask: 'assets/items/top-longsleeve-slim/balance-seoul-a/mask.png' } },
+      // balance-front-neutral: 원화_입고/8-03_정면_슬림긴팔탑.png
+      { baseId: 'balance-front-neutral', status: 'unverified', asset: { src: 'assets/items/top-longsleeve-slim/balance-r2/base.png', mask: 'assets/items/top-longsleeve-slim/balance-r2/mask.png' } },
     ],
     colorways: [
       { colorwayId: 'black', label: '블랙', hex: '#232125', mode: 'original', status: 'unverified' },
@@ -905,6 +909,8 @@ DYS.wardrobe = [
     // 원화_입고/7-08_포즈A_와이드슬랙스.png (첨부: 5-1_서울포즈A_밸런스.png) → tools/pose_queue.py ingest
     fits: [
       { baseId: 'balance-seoul-a', status: 'unverified', asset: { src: 'assets/items/bottom-slacks/balance-seoul-a/base.png', mask: 'assets/items/bottom-slacks/balance-seoul-a/mask.png' } },
+      // balance-front-neutral: 원화_입고/8-08_정면_와이드슬랙스.png
+      { baseId: 'balance-front-neutral', status: 'unverified', asset: { src: 'assets/items/bottom-slacks/balance-r2/base.png', mask: 'assets/items/bottom-slacks/balance-r2/mask.png' } },
     ],
     colorways: [
       { colorwayId: 'black', label: '블랙', hex: '#232125', mode: 'original', status: 'unverified' },
@@ -920,6 +926,8 @@ DYS.wardrobe = [
     // 원화_입고/7-09_포즈A_스트레이트진.png (첨부: 5-1_서울포즈A_밸런스.png) → tools/pose_queue.py ingest
     fits: [
       { baseId: 'balance-seoul-a', status: 'unverified', asset: { src: 'assets/items/bottom-jeans-straight/balance-seoul-a/base.png', mask: 'assets/items/bottom-jeans-straight/balance-seoul-a/mask.png' } },
+      // balance-front-neutral: 원화_입고/8-09_정면_스트레이트진.png
+      { baseId: 'balance-front-neutral', status: 'unverified', asset: { src: 'assets/items/bottom-jeans-straight/balance-r2/base.png', mask: 'assets/items/bottom-jeans-straight/balance-r2/mask.png' } },
     ],
     colorways: [
       { colorwayId: 'mid', label: '미드 인디고', hex: '#3f5a86', mode: 'original', status: 'unverified' },
@@ -1127,7 +1135,7 @@ DYS.wardrobe = [
     status: 'unverified', bodyId: 'balance', poseId: 'seoul-a', baseRevision: 'r1',
     // 원화_입고/7-43_포즈A_울롱코트.png (첨부: 0_합성_포즈A_차콜티데님.png) → tools/pose_queue.py ingest
     fits: [
-      { baseId: 'balance-seoul-a', status: 'unverified', asset: { src: 'assets/items/outer-wool-coat/balance-seoul-a/base.png', mask: 'assets/items/outer-wool-coat/balance-seoul-a/mask.png' } },
+      { baseId: 'balance-seoul-a', status: 'unverified', asset: { src: 'assets/items/outer-wool-coat/balance-seoul-a/base.png', back: 'assets/items/outer-wool-coat/balance-seoul-a/back.png', mask: 'assets/items/outer-wool-coat/balance-seoul-a/mask.png' } },
     ],
     colorways: [
       { colorwayId: 'camel', label: '카멜', hex: '#b58a5c', mode: 'original', status: 'unverified' },
@@ -1316,6 +1324,186 @@ DYS.wardrobe = [
       { colorwayId: 'burgundy', label: '버건디', hex: '#5e1c28', mode: 'tint', status: 'unverified' },
     ],
   },
+
+  // ── 서울 : AFTER 5 테마 전용(컨셉 보드 '테마보드_도시와일상' 01번 옷 + 같은 무드 확장) ──
+  // 가방은 손에 드는 대신 어깨에 메는 모양(자세가 손 모양까지 고정이라서)
+  {
+    ...plan('seoul-cami-crop', 'top', 'sleeveless', '캐미솔 크롭탑', ['feminine', 'casual', 'minimal'], ['spring', 'summer', 'fall'], 1, '흰색 새틴 느낌의 얇은 어깨끈 캐미솔 크롭탑, 배꼽 위 길이, 몸에 맞는 핏(속이 비치지 않게)', 'theme'),
+    status: 'unverified', bodyId: 'balance', poseId: 'seoul-a', baseRevision: 'r1',
+    // 원화_입고/7-46_포즈A_캐미솔크롭탑.png (첨부: 0_요청용_포즈A_짙은속옷.png) → tools/pose_queue.py ingest
+    fits: [
+      { baseId: 'balance-seoul-a', status: 'unverified', asset: { src: 'assets/items/seoul-cami-crop/balance-seoul-a/base.png', mask: 'assets/items/seoul-cami-crop/balance-seoul-a/mask.png' } },
+      // balance-front-neutral: 원화_입고/8-46_정면_캐미솔크롭탑.png
+      { baseId: 'balance-front-neutral', status: 'unverified', asset: { src: 'assets/items/seoul-cami-crop/balance-r2/base.png', mask: 'assets/items/seoul-cami-crop/balance-r2/mask.png' } },
+    ],
+    colorways: [
+      { colorwayId: 'white', label: '화이트', hex: '#f3f0ea', mode: 'original', status: 'unverified' },
+      { colorwayId: 'black', label: '블랙', hex: '#222023', mode: 'tint', status: 'unverified' },
+      { colorwayId: 'pink', label: '핑크', hex: '#ebc6c8', mode: 'tint', status: 'unverified' },
+    ],
+  },
+  {
+    ...plan('seoul-fluffy-cardigan', 'outer', 'cardigan', '핑크 퍼 가디건', ['lovely', 'casual', 'feminine'], ['fall', 'winter'], 1, '연핑크 복슬복슬한 퍼(모헤어) 오버사이즈 가디건, 단추 없이 앞을 열고 한쪽 어깨가 살짝 흘러내리게 걸침, 소매는 손등까지', 'theme'),
+    status: 'unverified', bodyId: 'balance', poseId: 'seoul-a', baseRevision: 'r1',
+    // 원화_입고/7-47_포즈A_핑크퍼가디건.png (첨부: 0_합성_포즈A_차콜티맨다리.png) → tools/pose_queue.py ingest
+    fits: [
+      { baseId: 'balance-seoul-a', status: 'unverified', asset: { src: 'assets/items/seoul-fluffy-cardigan/balance-seoul-a/base.png', mask: 'assets/items/seoul-fluffy-cardigan/balance-seoul-a/mask.png' } },
+      // balance-front-neutral: 원화_입고/8-47_정면_핑크퍼가디건.png
+      { baseId: 'balance-front-neutral', status: 'unverified', asset: { src: 'assets/items/seoul-fluffy-cardigan/balance-r2/base.png', mask: 'assets/items/seoul-fluffy-cardigan/balance-r2/mask.png' } },
+    ],
+    colorways: [
+      { colorwayId: 'pink', label: '베이비 핑크', hex: '#e9bcc3', mode: 'original', status: 'unverified' },
+      { colorwayId: 'ivory', label: '아이보리', hex: '#efe7da', mode: 'tint', status: 'unverified' },
+      { colorwayId: 'lavender', label: '라벤더', hex: '#cbbfd9', mode: 'tint', status: 'unverified' },
+      { colorwayId: 'gray', label: '그레이', hex: '#b3b1ae', mode: 'tint', status: 'unverified' },
+    ],
+  },
+  {
+    ...plan('seoul-wide-denim', 'bottom', 'jeans', '로우라이즈 와이드 데님', ['casual', 'street'], ALL, 1, '연청 로우라이즈 와이드 데님, 통이 넓고 밑단이 바닥에 살짝 끌리는 길이, 빈티지 워싱', 'theme'),
+    status: 'unverified', bodyId: 'balance', poseId: 'seoul-a', baseRevision: 'r1',
+    // 원화_입고/7-48_포즈A_로우라이즈와이드데님.png (첨부: 0_요청용_포즈A_짙은속옷.png) → tools/pose_queue.py ingest
+    fits: [
+      { baseId: 'balance-seoul-a', status: 'unverified', asset: { src: 'assets/items/seoul-wide-denim/balance-seoul-a/base.png', mask: 'assets/items/seoul-wide-denim/balance-seoul-a/mask.png' } },
+      // balance-front-neutral: 원화_입고/8-48_정면_로우라이즈와이드데님.png
+      { baseId: 'balance-front-neutral', status: 'unverified', asset: { src: 'assets/items/seoul-wide-denim/balance-r2/base.png', mask: 'assets/items/seoul-wide-denim/balance-r2/mask.png' } },
+    ],
+    colorways: [
+      { colorwayId: 'light', label: '연청', hex: '#a9bfd6', mode: 'original', status: 'unverified' },
+      { colorwayId: 'mid', label: '미드 블루', hex: '#6c86ad', mode: 'tint', status: 'unverified' },
+      { colorwayId: 'gray', label: '그레이 워시', hex: '#9a9ea6', mode: 'tint', status: 'unverified' },
+    ],
+  },
+  {
+    ...plan('seoul-leather-tote', 'bag', 'tote', '가죽 숄더 토트', ['chic', 'classic'], ALL, 1, '검정 가죽 사각 토트백, 금색 작은 장식, 짧은 손잡이를 어깨에 걸어 겨드랑이 아래 옆구리에 붙게 멤', 'theme'),
+    status: 'unverified', bodyId: 'balance', poseId: 'seoul-a', baseRevision: 'r1',
+    // 원화_입고/7-49_포즈A_가죽숄더토트.png (첨부: 0_합성_포즈A_흰셔츠데님.png) → tools/pose_queue.py ingest
+    fits: [
+      { baseId: 'balance-seoul-a', status: 'unverified', asset: { src: 'assets/items/seoul-leather-tote/balance-seoul-a/base.png', mask: 'assets/items/seoul-leather-tote/balance-seoul-a/mask.png', protect: 'assets/items/seoul-leather-tote/balance-seoul-a/protect.png' } },
+      // balance-front-neutral: 원화_입고/8-49_정면_가죽숄더토트.png
+      { baseId: 'balance-front-neutral', status: 'unverified', asset: { src: 'assets/items/seoul-leather-tote/balance-r2/base.png', mask: 'assets/items/seoul-leather-tote/balance-r2/mask.png', protect: 'assets/items/seoul-leather-tote/balance-r2/protect.png' } },
+    ],
+    colorways: [
+      { colorwayId: 'black', label: '블랙', hex: '#1f1d1e', mode: 'original', status: 'unverified' },
+      { colorwayId: 'brown', label: '초콜릿', hex: '#4a3226', mode: 'tint', status: 'unverified' },
+      { colorwayId: 'ivory', label: '아이보리', hex: '#e9e2d4', mode: 'tint', status: 'unverified' },
+    ],
+  },
+  {
+    ...plan('seoul-chunky-sneakers', 'shoes', 'sneakers', '청키 스니커즈', ['casual', 'street'], ALL, 1, '흰색 두꺼운 밑창의 청키 스니커즈, 크림색 포인트', 'theme'),
+    status: 'unverified', bodyId: 'balance', poseId: 'seoul-a', baseRevision: 'r1',
+    // 원화_입고/7-50_포즈A_청키스니커즈.png (첨부: 0_요청용_포즈A_짙은속옷.png) → tools/pose_queue.py ingest
+    fits: [
+      { baseId: 'balance-seoul-a', status: 'unverified', asset: { src: 'assets/items/seoul-chunky-sneakers/balance-seoul-a/base.png', mask: 'assets/items/seoul-chunky-sneakers/balance-seoul-a/mask.png' } },
+      // balance-front-neutral: 원화_입고/8-50_정면_청키스니커즈.png
+      { baseId: 'balance-front-neutral', status: 'unverified', asset: { src: 'assets/items/seoul-chunky-sneakers/balance-r2/base.png', mask: 'assets/items/seoul-chunky-sneakers/balance-r2/mask.png' } },
+    ],
+    colorways: [
+      { colorwayId: 'white', label: '화이트', hex: '#f2f0ec', mode: 'original', status: 'unverified' },
+      { colorwayId: 'gray', label: '그레이', hex: '#b5b3b0', mode: 'tint', status: 'unverified' },
+    ],
+  },
+  {
+    ...plan('seoul-offshoulder-knit', 'top', 'knit', '오프숄더 니트', ['feminine', 'lovely'], ['fall', 'winter'], 1, '더스티 로즈색 오프숄더 골지 니트, 쇄골이 드러나는 넓은 네크라인, 허리 길이, 긴소매', 'theme'),
+    status: 'unverified', bodyId: 'balance', poseId: 'seoul-a', baseRevision: 'r1',
+    // 원화_입고/7-51_포즈A_오프숄더니트.png (첨부: 0_요청용_포즈A_짙은속옷.png) → tools/pose_queue.py ingest
+    fits: [
+      { baseId: 'balance-seoul-a', status: 'unverified', asset: { src: 'assets/items/seoul-offshoulder-knit/balance-seoul-a/base.png', mask: 'assets/items/seoul-offshoulder-knit/balance-seoul-a/mask.png' } },
+      // balance-front-neutral: 원화_입고/8-51_정면_오프숄더니트.png
+      { baseId: 'balance-front-neutral', status: 'unverified', asset: { src: 'assets/items/seoul-offshoulder-knit/balance-r2/base.png', mask: 'assets/items/seoul-offshoulder-knit/balance-r2/mask.png' } },
+    ],
+    colorways: [
+      { colorwayId: 'rose', label: '더스티 로즈', hex: '#c99a9c', mode: 'original', status: 'unverified' },
+      { colorwayId: 'cream', label: '크림', hex: '#eee6d6', mode: 'tint', status: 'unverified' },
+      { colorwayId: 'black', label: '블랙', hex: '#232125', mode: 'tint', status: 'unverified' },
+    ],
+  },
+  {
+    ...plan('seoul-tweed-jacket', 'outer', 'jacket', '크롭 트위드 재킷', ['classic', 'feminine', 'chic'], ['spring', 'fall'], 1, '아이보리 크롭 트위드 재킷, 금색 단추, 테두리에 술 장식, 허리 위 길이, 앞을 열고 걸침', 'theme'),
+    status: 'unverified', bodyId: 'balance', poseId: 'seoul-a', baseRevision: 'r1',
+    // 원화_입고/7-52_포즈A_크롭트위드재킷.png (첨부: 0_합성_포즈A_차콜티맨다리.png) → tools/pose_queue.py ingest
+    fits: [
+      { baseId: 'balance-seoul-a', status: 'unverified', asset: { src: 'assets/items/seoul-tweed-jacket/balance-seoul-a/base.png', mask: 'assets/items/seoul-tweed-jacket/balance-seoul-a/mask.png' } },
+      // balance-front-neutral: 원화_입고/8-52_정면_크롭트위드재킷.png
+      { baseId: 'balance-front-neutral', status: 'unverified', asset: { src: 'assets/items/seoul-tweed-jacket/balance-r2/base.png', mask: 'assets/items/seoul-tweed-jacket/balance-r2/mask.png' } },
+    ],
+    colorways: [
+      { colorwayId: 'ivory', label: '아이보리', hex: '#ece5d6', mode: 'original', status: 'unverified' },
+      { colorwayId: 'pink', label: '핑크', hex: '#e4c0c3', mode: 'tint', status: 'unverified' },
+      { colorwayId: 'black', label: '블랙', hex: '#232125', mode: 'tint', status: 'unverified' },
+    ],
+  },
+  {
+    ...plan('seoul-denim-mini', 'bottom', 'skirt', '데님 미니스커트', ['casual', 'lovely'], SSF, 1, '연청 하이웨이스트 데님 미니스커트, 허벅지 중간 길이, 밑단 올 풀림', 'theme'),
+    status: 'unverified', bodyId: 'balance', poseId: 'seoul-a', baseRevision: 'r1',
+    // 원화_입고/7-53_포즈A_데님미니스커트.png (첨부: 0_요청용_포즈A_짙은속옷.png) → tools/pose_queue.py ingest
+    fits: [
+      { baseId: 'balance-seoul-a', status: 'unverified', asset: { src: 'assets/items/seoul-denim-mini/balance-seoul-a/base.png', mask: 'assets/items/seoul-denim-mini/balance-seoul-a/mask.png' } },
+      // balance-front-neutral: 원화_입고/8-53_정면_데님미니스커트.png
+      { baseId: 'balance-front-neutral', status: 'unverified', asset: { src: 'assets/items/seoul-denim-mini/balance-r2/base.png', mask: 'assets/items/seoul-denim-mini/balance-r2/mask.png' } },
+    ],
+    colorways: [
+      { colorwayId: 'light', label: '연청', hex: '#a9bfd6', mode: 'original', status: 'unverified' },
+      { colorwayId: 'black', label: '블랙', hex: '#2a2b30', mode: 'tint', status: 'unverified' },
+    ],
+  },
+  {
+    ...plan('seoul-satin-slip', 'dress', 'party', '새틴 슬립 드레스', ['chic', 'feminine'], SSF, 1, '더스티 핑크 새틴 슬립 원피스, 가는 어깨끈, 종아리 길이, 은은한 광택', 'theme'),
+    status: 'unverified', bodyId: 'balance', poseId: 'seoul-a', baseRevision: 'r1',
+    // 원화_입고/7-54_포즈A_새틴슬립드레스.png (첨부: 0_요청용_포즈A_짙은속옷.png) → tools/pose_queue.py ingest
+    fits: [
+      { baseId: 'balance-seoul-a', status: 'unverified', asset: { src: 'assets/items/seoul-satin-slip/balance-seoul-a/base.png', mask: 'assets/items/seoul-satin-slip/balance-seoul-a/mask.png' } },
+      // balance-front-neutral: 원화_입고/8-54_정면_새틴슬립드레스.png
+      { baseId: 'balance-front-neutral', status: 'unverified', asset: { src: 'assets/items/seoul-satin-slip/balance-r2/base.png', mask: 'assets/items/seoul-satin-slip/balance-r2/mask.png' } },
+    ],
+    colorways: [
+      { colorwayId: 'rose', label: '더스티 핑크', hex: '#d8a9aa', mode: 'original', status: 'unverified' },
+      { colorwayId: 'champagne', label: '샴페인', hex: '#dcc9a8', mode: 'tint', status: 'unverified' },
+      { colorwayId: 'black', label: '블랙', hex: '#1f1d20', mode: 'tint', status: 'unverified' },
+    ],
+  },
+  {
+    ...plan('seoul-ballet-flats', 'shoes', 'flats', '리본 발레 플랫', ['lovely', 'feminine'], SSF, 1, '검정 새틴 발레 플랫 슈즈, 발목에 묶는 가는 리본', 'theme'),
+    status: 'unverified', bodyId: 'balance', poseId: 'seoul-a', baseRevision: 'r1',
+    // 원화_입고/7-55_포즈A_리본발레플랫.png (첨부: 0_요청용_포즈A_짙은속옷.png) → tools/pose_queue.py ingest
+    fits: [
+      { baseId: 'balance-seoul-a', status: 'unverified', asset: { src: 'assets/items/seoul-ballet-flats/balance-seoul-a/base.png', mask: 'assets/items/seoul-ballet-flats/balance-seoul-a/mask.png' } },
+      // balance-front-neutral: 원화_입고/8-55_정면_리본발레플랫.png
+      { baseId: 'balance-front-neutral', status: 'unverified', asset: { src: 'assets/items/seoul-ballet-flats/balance-r2/base.png', mask: 'assets/items/seoul-ballet-flats/balance-r2/mask.png' } },
+    ],
+    colorways: [
+      { colorwayId: 'black', label: '블랙', hex: '#1d1c1e', mode: 'original', status: 'unverified' },
+      { colorwayId: 'pink', label: '핑크', hex: '#e4c0c3', mode: 'tint', status: 'unverified' },
+    ],
+  },
+  {
+    ...plan('seoul-mini-shoulder-pink', 'bag', 'shoulder', '핑크 미니 숄더백', ['lovely', 'feminine'], ALL, 1, '연핑크 퀼팅 미니 숄더백, 금색 체인 끈을 어깨에 메고 가방은 허리 옆', 'theme'),
+    status: 'unverified', bodyId: 'balance', poseId: 'seoul-a', baseRevision: 'r1',
+    // 원화_입고/7-56_포즈A_핑크미니숄더백.png (첨부: 0_합성_포즈A_흰셔츠데님.png) → tools/pose_queue.py ingest
+    fits: [
+      { baseId: 'balance-seoul-a', status: 'unverified', asset: { src: 'assets/items/seoul-mini-shoulder-pink/balance-seoul-a/base.png', mask: 'assets/items/seoul-mini-shoulder-pink/balance-seoul-a/mask.png', protect: 'assets/items/seoul-mini-shoulder-pink/balance-seoul-a/protect.png' } },
+      // balance-front-neutral: 원화_입고/8-56_정면_핑크미니숄더백.png
+      { baseId: 'balance-front-neutral', status: 'unverified', asset: { src: 'assets/items/seoul-mini-shoulder-pink/balance-r2/base.png', mask: 'assets/items/seoul-mini-shoulder-pink/balance-r2/mask.png', protect: 'assets/items/seoul-mini-shoulder-pink/balance-r2/protect.png' } },
+    ],
+    colorways: [
+      { colorwayId: 'pink', label: '핑크', hex: '#e9bcc3', mode: 'original', status: 'unverified' },
+      { colorwayId: 'black', label: '블랙', hex: '#1f1d1e', mode: 'tint', status: 'unverified' },
+      { colorwayId: 'ivory', label: '아이보리', hex: '#e9e2d4', mode: 'tint', status: 'unverified' },
+    ],
+  },
+  {
+    ...plan('seoul-hair-claw', 'accessory', 'hairacc', '집게핀', ['casual', 'minimal'], ALL, 1, '뒷머리 올림머리에 꽂은 반투명 브라운 대형 집게핀(정면에서 머리 뒤로 살짝 보이게)', 'theme'),
+    status: 'unverified', bodyId: 'balance', poseId: 'seoul-a', baseRevision: 'r1',
+    // 원화_입고/7-57_포즈A_집게핀.png (첨부: 0_합성_포즈A_흰셔츠데님.png) → tools/pose_queue.py ingest
+    fits: [
+      { baseId: 'balance-seoul-a', status: 'unverified', asset: { src: 'assets/items/seoul-hair-claw/balance-seoul-a/base.png', mask: 'assets/items/seoul-hair-claw/balance-seoul-a/mask.png', protect: 'assets/items/seoul-hair-claw/balance-seoul-a/protect.png' } },
+      // balance-front-neutral: 원화_입고/8-57_정면_집게핀.png
+      { baseId: 'balance-front-neutral', status: 'unverified', asset: { src: 'assets/items/seoul-hair-claw/balance-r2/base.png', mask: 'assets/items/seoul-hair-claw/balance-r2/mask.png', protect: 'assets/items/seoul-hair-claw/balance-r2/protect.png' } },
+    ],
+    colorways: [
+      { colorwayId: 'brown', label: '브라운', hex: '#6b4a36', mode: 'original', status: 'unverified' },
+      { colorwayId: 'black', label: '블랙', hex: '#1d1c1e', mode: 'tint', status: 'unverified' },
+    ],
+  },
 ];
 
 </script>
@@ -1341,6 +1529,9 @@ DYS.itemExtra = {
 // 지원하지 않는 조합은 만들지 않는다(밝기 슬라이더로 시간대를 흉내 내지 않음).
 // asset.src: 1024×1536 배경 그림(인물 없음). 인물 발밑이 바닥선(아래 약 5%)에 오도록 그린 것.
 // common: true 인 장면은 어느 테마에서나 고를 수 있다(기본 드레스룸).
+// place: 같은 장소 묶음(촬영 화면에서 장소 → 시간·날씨 순으로 고른다), time: 낮·노을·밤, weather: 맑음·흐림·비
+// 시간·날씨 변형은 '같은 구도에서 시간만 바꾼' 그림을 따로 받는다(인물 색 맞춤은 배경에서 자동으로 뽑아서 따라간다).
+// prompt: 원화 요청 문장(그림이 없을 때 이것으로 ChatGPT에 요청)
 window.DYS = window.DYS || {};
 
 DYS.scenes = [
@@ -1353,15 +1544,71 @@ DYS.scenes = [
   },
   {
     sceneId: 'seongsu-cafe-late-afternoon',
-    label: '성수 카페 · 늦은 오후',
+    label: '성수 카페 · 늦은 오후', place: '성수 카페 거리', time: '낮', weather: '맑음',
     status: 'unverified',
     asset: { src: 'assets/scenes/seongsu-cafe-late-afternoon/bg.png' }, // 원화_입고/4-2_배경_성수카페_늦은오후.png
   },
   {
     sceneId: 'hangang-sunset',
-    label: '한강 · 노을',
+    label: '한강 · 노을', place: '한강 산책로', time: '노을', weather: '맑음',
     status: 'unverified',
     asset: { src: 'assets/scenes/hangang-sunset/bg.png' }, // 원화_입고/4-3_배경_한강_노을.png
+  },
+  {
+    sceneId: 'seongsu-cafe-night',
+    label: '성수 카페 · 밤', place: '성수 카페 거리', time: '밤', weather: '맑음', base: 'seongsu-cafe-late-afternoon',
+    status: 'unverified',
+    asset: { src: 'assets/scenes/seongsu-cafe-night/bg.png' },
+    prompt: '첨부한 배경과 구도·건물·사물은 그대로 두고 시간만 밤으로 바꿔줘: 카페 창문과 전구에서 따뜻한 불빛, 하늘은 짙은 남색, 보도블록에 불빛 반사.',
+  },
+  {
+    sceneId: 'seongsu-cafe-rain',
+    label: '성수 카페 · 비', place: '성수 카페 거리', time: '낮', weather: '비', base: 'seongsu-cafe-late-afternoon',
+    status: 'unverified',
+    asset: { src: 'assets/scenes/seongsu-cafe-rain/bg.png' },
+    prompt: '첨부한 배경과 구도·건물·사물은 그대로 두고 날씨만 비 오는 흐린 오후로 바꿔줘: 젖은 보도블록 반사, 가는 빗줄기, 회색빛 하늘, 차분한 색감.',
+  },
+  {
+    sceneId: 'hangang-night',
+    label: '한강 · 밤', place: '한강 산책로', time: '밤', weather: '맑음', base: 'hangang-sunset',
+    status: 'unverified',
+    asset: { src: 'assets/scenes/hangang-night/bg.png' },
+    prompt: '첨부한 배경과 구도는 그대로 두고 시간만 밤으로 바꿔줘: 강 건너 도시 불빛과 다리 조명이 강물에 반사, 산책로 가로등의 따뜻한 빛.',
+  },
+  {
+    sceneId: 'yeonnam-forest-day',
+    label: '연남동 숲길 · 낮', place: '연남동 경의선 숲길', time: '낮', weather: '맑음',
+    status: 'unverified',
+    asset: { src: 'assets/scenes/yeonnam-forest-day/bg.png' },
+    prompt: '장소: 서울 연남동 경의선 숲길, 맑은 봄날 낮. 잔디와 나무 사이 산책로, 양옆에 작은 카페와 벽돌 건물, 나뭇잎 사이 햇살. 사람은 절대 없이 공간만. 세로 1024x1536. 화면 가운데는 캐릭터가 설 자리라 비워 두고 사물은 양옆과 뒤쪽에만. 카메라는 서 있는 사람 가슴 높이에서 정면, 바닥이 화면 아래쪽 절반을 차지하게. 부드러운 반실사 게임 배경 일러스트(기존 서울 배경들과 같은 그림체), 간판 글자·로고 없이.',
+  },
+  {
+    sceneId: 'bukchon-hanok-afternoon',
+    label: '북촌 한옥 골목 · 오후', place: '북촌 한옥 골목', time: '낮', weather: '맑음',
+    status: 'unverified',
+    asset: { src: 'assets/scenes/bukchon-hanok-afternoon/bg.png' },
+    prompt: '장소: 서울 북촌 한옥마을 돌계단 골목, 늦은 오후 햇살. 기와지붕과 돌담, 멀리 도시가 살짝 보임. 사람은 절대 없이 공간만. 세로 1024x1536. 화면 가운데는 캐릭터가 설 자리라 비워 두고 사물은 양옆과 뒤쪽에만. 카메라는 서 있는 사람 가슴 높이에서 정면, 바닥이 화면 아래쪽 절반을 차지하게. 부드러운 반실사 게임 배경 일러스트(기존 서울 배경들과 같은 그림체), 간판 글자·로고 없이.',
+  },
+  {
+    sceneId: 'euljiro-alley-night',
+    label: '을지로 골목 · 밤', place: '을지로 골목', time: '밤', weather: '맑음',
+    status: 'unverified',
+    asset: { src: 'assets/scenes/euljiro-alley-night/bg.png' },
+    prompt: '장소: 서울 을지로 오래된 인쇄소 골목의 밤, 레트로 감성. 네온 불빛과 노란 가로등, 오래된 간판(글자 없이 빛만), 젖은 듯 반짝이는 바닥. 사람은 절대 없이 공간만. 세로 1024x1536. 화면 가운데는 캐릭터가 설 자리라 비워 두고 사물은 양옆과 뒤쪽에만. 카메라는 서 있는 사람 가슴 높이에서 정면, 바닥이 화면 아래쪽 절반을 차지하게. 부드러운 반실사 게임 배경 일러스트(기존 서울 배경들과 같은 그림체), 간판 글자·로고 없이.',
+  },
+  {
+    sceneId: 'namsan-view-evening',
+    label: '남산 전망 · 저녁', place: '남산 전망대', time: '노을', weather: '맑음',
+    status: 'unverified',
+    asset: { src: 'assets/scenes/namsan-view-evening/bg.png' },
+    prompt: '장소: 서울 남산 산책로 전망 난간, 해 질 무렵. 뒤로 서울 도심 야경이 막 켜지기 시작하는 하늘, 분홍·보라빛 노을, 멀리 N서울타워 실루엣. 사람은 절대 없이 공간만. 세로 1024x1536. 화면 가운데는 캐릭터가 설 자리라 비워 두고 사물은 양옆과 뒤쪽에만. 카메라는 서 있는 사람 가슴 높이에서 정면, 바닥이 화면 아래쪽 절반을 차지하게. 부드러운 반실사 게임 배경 일러스트(기존 서울 배경들과 같은 그림체), 간판 글자·로고 없이.',
+  },
+  {
+    sceneId: 'garosu-street-cloudy',
+    label: '가로수길 · 흐린 날', place: '신사동 가로수길', time: '낮', weather: '흐림',
+    status: 'unverified',
+    asset: { src: 'assets/scenes/garosu-street-cloudy/bg.png' },
+    prompt: '장소: 서울 신사동 가로수길, 흐린 가을 오후. 은행나무 가로수와 세련된 매장 쇼윈도(글자 없이), 부드러운 회색빛 하늘, 차분한 톤. 사람은 절대 없이 공간만. 세로 1024x1536. 화면 가운데는 캐릭터가 설 자리라 비워 두고 사물은 양옆과 뒤쪽에만. 카메라는 서 있는 사람 가슴 높이에서 정면, 바닥이 화면 아래쪽 절반을 차지하게. 부드러운 반실사 게임 배경 일러스트(기존 서울 배경들과 같은 그림체), 간판 글자·로고 없이.',
   },
 ];
 
@@ -1381,11 +1628,13 @@ DYS.themes = [
     mood: ['일상', '데이트', '도시의 저녁'],
     tagline: '친구와의 갑작스러운 저녁 약속. 편안하지만 사진은 남기고 싶은 날.',
     status: 'unverified',
-    itemRefs: [
-      'top-tshirt-basic', 'top-blouse-basic', 'bottom-denim-wide', 'shoes-sneaker-white',
-      'top-shirt-white', 'outer-blazer', 'outer-trench', 'bottom-mini-skirt', 'shoes-loafer', 'bag-shoulder-small',
+    itemRefs: [ // 서울 테마 전용 컨셉 옷(기본 옷장은 모든 테마에서 함께 보인다)
+      'seoul-cami-crop', 'seoul-fluffy-cardigan', 'seoul-wide-denim', 'seoul-leather-tote', 'seoul-chunky-sneakers',
+      'seoul-offshoulder-knit', 'seoul-tweed-jacket', 'seoul-denim-mini', 'seoul-satin-slip', 'seoul-ballet-flats',
+      'seoul-mini-shoulder-pink', 'seoul-hair-claw',
     ],
-    sceneRefs: ['seongsu-cafe-late-afternoon', 'hangang-sunset'],
+    sceneRefs: ['seongsu-cafe-late-afternoon', 'seongsu-cafe-night', 'seongsu-cafe-rain', 'hangang-sunset', 'hangang-night',
+      'yeonnam-forest-day', 'bukchon-hanok-afternoon', 'euljiro-alley-night', 'namsan-view-evening', 'garosu-street-cloudy'],
     poseRefs: ['seoul-a'], // 이 테마의 자연스러운 자세(정면은 모든 테마 공통)
   },
   {
@@ -1894,7 +2143,12 @@ window.DYS = window.DYS || {};
     for (let i = 0; i < n; i += 4) {
       const w = mask.data[i + 3] / 255;
       if (w <= 0 || src.data[i + 3] === 0) continue;
-      const L = lum(src.data[i], src.data[i + 1], src.data[i + 2]);
+      let L = lum(src.data[i], src.data[i + 1], src.data[i + 2]);
+      // 가장자리(피부와 섞인 픽셀)는 밝기가 피부 쪽으로 끌려 있다 → 머리카락 몫의 밝기(중간 밝기)로 보고 칠한 뒤 섞인 비율만큼만 입힌다
+      // 마스크 R 채널 = 머리선에서 떨어진 정도(255=안쪽). 머리선에 가까울수록 하이라이트로 보지 않는다
+      const inner = mask.data[i] / 255;
+      const cap = q50 + (1 - q50) * inner * inner;
+      if (w < 0.97 || inner < 1) L = Math.min(L, cap);
       let c;
       if (L <= q15) c = mix([0, 0, 0], S, Math.max(0, L / q15) * 0.85 + 0.15);
       else if (L <= q50) c = mix(S, B, (L - q15) / (q50 - q15));
@@ -2108,6 +2362,29 @@ DYS.makeFixtures = function makeFixtures(W, H) {
   const FRAMINGS = [['full', '전신', 1], ['knee', '무릎 위', 1.45], ['half', '상반신', 2.1]];
   const POSITIONS = [[-1, '왼쪽'], [0, '가운데'], [1, '오른쪽']];
   const shootScenes = () => catalog.data.scenes.filter((sc) => sc.asset).sort((a, b) => (a.common ? 1 : 0) - (b.common ? 1 : 0)); // 공용(드레스룸)은 맨 뒤
+  const placeOf = (sc) => sc.place || sc.label; // place가 없는 장면은 이름이 곧 장소
+  // 촬영에서 고를 수 있는 장소 묶음: 이 테마의 장면 + 공용, 그림 있는 장면이 하나라도 있는 장소만
+  function shootPlaces() {
+    const t = catalog.theme(state.themeId);
+    const refs = (t && t.sceneRefs) || [];
+    const map = new Map();
+    for (const sc of shootScenes()) {
+      if (!sc.common && !refs.includes(sc.sceneId)) continue;
+      const k = placeOf(sc);
+      if (!map.has(k)) map.set(k, []);
+      map.get(k).push(sc);
+    }
+    return [...map.entries()].map(([place, scenes]) => ({ place, scenes }));
+  }
+  // 같은 장소 안에서 시간·날씨 칩 이름(맑음은 같은 시간에 다른 날씨가 있을 때만 적는다)
+  function variantLabel(sc, scenes) {
+    if (!sc.time && !sc.weather) return sc.label;
+    const sameTime = scenes.filter((x) => x.time === sc.time).length > 1;
+    const parts = [];
+    if (sc.time && !(sc.weather && sc.weather !== '맑음' && sc.time === '낮')) parts.push(sc.time);
+    if (sc.weather && (sc.weather !== '맑음' || sameTime)) parts.push(sc.weather);
+    return parts.join(' · ') || sc.label;
+  }
   const shoot = { sceneId: (shootScenes()[0] || {}).sceneId, framing: 'full', pos: 0, flip: false };
   // 드레스룸 화면 배경 = 기본 장면(그림이 없으면 단색 무대)
   const dressScene = () => { const sc = catalog.scene(cfg.defaultSceneId); return sc && sc.asset ? sc : null; };
@@ -2207,10 +2484,12 @@ DYS.makeFixtures = function makeFixtures(W, H) {
     if (entry.kind === 'base') {
       if (state.fixtureMode) return fixtures.base;
       if (!base.asset) return null;
-      const img = await loadImage(base.asset.src);
+      // 하의·원피스를 입으면 속옷 아랫부분을 피부로 메운 몸 그림(tools/panty_fill.py) — 허리 위로 속옷이 보이지 않게
+      const useCovered = entry.covered && base.asset.covered;
+      const img = await loadImage(useCovered ? base.asset.covered : base.asset.src);
       const hc = hairColor();
       if (!hc.palette || !base.asset.hairMask) return img;
-      return hairTinted(`hair:${base.baseId}`, img, base.asset.hairMask, W, H);
+      return hairTinted(`hair:${base.baseId}${useCovered ? ':c' : ''}`, img, base.asset.hairMask, W, H);
     }
     const { item, colorway } = entry;
     const w = catalog.wearable(item, base, fixtureSet());
@@ -2228,6 +2507,23 @@ DYS.makeFixtures = function makeFixtures(W, H) {
     }
     if (colorway.mode === 'original') return src;
     return tinted(`${w.source}:${base.baseId}:${item.itemId}:${colorway.colorwayId}`, src, colorway.hex, mask, protect);
+  }
+
+  // 아우터 뒷판(안감): 앞이 열린 코트는 다리 사이로 뒷판이 보여야 한다 → 몸보다 뒤에 깐다(tools/outer_back.py가 만든 back.png)
+  async function withOuterBack(stack, bodyImg) {
+    const e = stack.find((x) => x.layerId === 'outer' && x.kind === 'item');
+    if (!e || state.fixtureMode) return bodyImg;
+    const w = catalog.wearable(e.item, base, null);
+    const a = w.ok && w.fit && w.fit.asset;
+    if (!a || !a.back) return bodyImg;
+    let back = await loadImage(a.back);
+    if (e.colorway && e.colorway.mode === 'tint') back = tinted(`back:${base.baseId}:${e.item.itemId}:${e.colorway.colorwayId}`, back, e.colorway.hex, null, null);
+    const c = document.createElement('canvas');
+    c.width = W; c.height = H;
+    const cx = c.getContext('2d');
+    cx.drawImage(back, 0, 0, W, H);
+    cx.drawImage(bodyImg, 0, 0, W, H);
+    return c;
   }
 
   // 아우터를 입으면 그 밑 상의·원피스는 아우터 좌우 폭 밖으로 나오지 않게 자른다
@@ -2303,6 +2599,8 @@ DYS.makeFixtures = function makeFixtures(W, H) {
     pc.drawImage(ctx.canvas, 0, 0);
     const bg = await loadImage(sc.asset.src);
     const tone = toneOf(bg);
+    const dark = Math.max(0, Math.min(1, (0.5 - tone.lum) / 0.4)); // 장면이 어두울수록 1에 가까움
+    const rainy = sc.weather === '비';
     // 인물을 장면 빛으로 물들이기: 소프트라이트로 빛 색을 입힌 것을 45% 섞는다
     const lit = document.createElement('canvas');
     lit.width = W; lit.height = H;
@@ -2315,6 +2613,22 @@ DYS.makeFixtures = function makeFixtures(W, H) {
     pc.globalAlpha = sc.grade ?? 0.45;
     pc.drawImage(lit, 0, 0);
     pc.globalAlpha = 1;
+    // 어두운 장면(밤·비)은 인물을 조금 더 어둡고 차갑게, 비 오는 날은 채도를 살짝 낮춘다(얼굴이 묻히지 않게 약하게)
+    if (dark > 0.02 || rainy) {
+      const cool = document.createElement('canvas');
+      cool.width = W; cool.height = H;
+      const cc = cool.getContext('2d');
+      cc.drawImage(person, 0, 0);
+      cc.globalCompositeOperation = 'source-atop';
+      cc.fillStyle = `rgba(28,42,80,${0.22 * dark})`; cc.fillRect(0, 0, W, H); // 차가운 남색 살짝
+      cc.fillStyle = `rgba(0,0,0,${0.16 * dark})`; cc.fillRect(0, 0, W, H); // 어둡게
+      if (rainy) { cc.fillStyle = 'rgba(128,132,140,0.16)'; cc.fillRect(0, 0, W, H); } // 회색을 섞어 채도 낮춤
+      pc.save();
+      pc.globalCompositeOperation = 'source-over';
+      pc.clearRect(0, 0, W, H);
+      pc.drawImage(cool, 0, 0);
+      pc.restore();
+    }
     // 배경(비율이 다르면 잘라서 꽉 채움) + 발밑 그림자 + 인물
     ctx.clearRect(0, 0, W, H);
     const k = Math.max(W / bg.naturalWidth, H / bg.naturalHeight);
@@ -2322,10 +2636,11 @@ DYS.makeFixtures = function makeFixtures(W, H) {
     ctx.drawImage(bg, (W - dw) / 2, H - dh, dw, dh);
     const f = feetOf(baseImg);
     ctx.save();
-    ctx.filter = 'blur(14px)';
-    ctx.fillStyle = `rgba(45,30,20,${0.28 + 0.15 * (1 - tone.lum)})`;
+    const soft = Math.max(dark, rainy ? 0.6 : 0); // 밤·비: 그림자를 더 옅고 넓고 부드럽게
+    ctx.filter = `blur(${14 + 8 * soft}px)`;
+    ctx.fillStyle = `rgba(45,30,20,${(0.28 + 0.15 * (1 - tone.lum)) * (1 - 0.4 * soft)})`;
     ctx.beginPath();
-    ctx.ellipse(f.cx + dx, f.y - 6, f.w * 0.62, 22, 0, 0, Math.PI * 2);
+    ctx.ellipse(f.cx + dx, f.y - 6, f.w * (0.62 + 0.18 * soft), 22 + 6 * soft, 0, 0, Math.PI * 2);
     ctx.fill();
     ctx.restore();
     // 인물: 위치 이동·좌우 반전(발 자리를 축으로 — 배경은 그대로)
@@ -2397,11 +2712,13 @@ DYS.makeFixtures = function makeFixtures(W, H) {
       outfit = Object.fromEntries(Object.entries(outfit).filter(([, p]) => catalog.wearable(catalog.item(p.itemId), base, null).ok));
     }
     const stack = DYS.buildLayerStack(catalog, outfit);
+    stack[0].covered = stack.some((e) => e.layerId === 'bottom' || e.layerId === 'dress');
     if (!state.fixtureMode && base.asset) stack.splice(1, 0, { layerId: 'face', kind: 'face' });
     const imgs = await Promise.all(stack.map(resolveEntry));
     clipUnderOuter(stack, imgs);
     const hasBase = !!imgs[0];
-    DYS.drawStack(ctx, stack, (e) => (hasBase ? imgs[stack.indexOf(e)] : null));
+    const bodyWithBack = hasBase ? await withOuterBack(stack, imgs[0]) : null;
+    DYS.drawStack(ctx, stack, (e) => (!hasBase ? null : e.kind === 'base' ? bodyWithBack : imgs[stack.indexOf(e)]));
     if (!hasBase) return false;
     const sc = shot ? (catalog.scene(shot.sceneId) || dressScene()) : dressScene();
     const cam = shot ? cameraFor(shot, imgs[0]) : null;
@@ -2438,7 +2755,6 @@ DYS.makeFixtures = function makeFixtures(W, H) {
     $('#stage-empty-title').textContent = `기준 인물 · ${base.label}`;
     $('#stage-empty-status').replaceChildren(badge(base.status));
     $('#btn-save').disabled = !ok;
-    $('#btn-save-top').disabled = !ok;
     const octx = overlayCanvas.getContext('2d');
     octx.clearRect(0, 0, W, H);
     if (state.overlay) {
@@ -2547,7 +2863,7 @@ DYS.makeFixtures = function makeFixtures(W, H) {
     box.replaceChildren(...tabs.map(([id, label]) => el('button', {
       class: id === state.tab ? 'on' : '', role: 'tab', 'aria-selected': String(id === state.tab),
       onclick: () => {
-        state.tab = id; state.view = id === 'face' ? 'face' : 'body'; state.filter.open = null;
+        state.tab = id; state.view = (id === 'face' || id === 'hair') ? 'face' : 'body'; state.filter.open = null; // 얼굴·헤어는 가까이 보기
         renderAll(true);
       },
     }, label)));
@@ -2566,11 +2882,12 @@ DYS.makeFixtures = function makeFixtures(W, H) {
     const drop = (id, label) => chip(`${label} ▾`, f.open === id || (id === 'style' && f.styles.length) || (id === 'length' && f.lengths.length) || (id === 'theme' && f.theme !== 'all'),
       () => { f.open = f.open === id ? null : id; renderFilters(); }, { 'aria-expanded': String(f.open === id) });
     const modes = [['all', '전체'], ['fav', '♥'], ['recent', '최근']];
-    $('#filters').replaceChildren(
+    $('#filters').replaceChildren(...[
       ...modes.map(([v, label]) => chip(label, f.mode === v, () => { f.mode = v; renderAll(true); }, v === 'fav' ? { 'aria-label': '즐겨찾기만 보기' } : {})),
       drop('style', f.styles.length ? `스타일 ${f.styles.length}` : '스타일'),
       state.tab === 'bottom' ? drop('length', f.lengths.length ? `길이 ${f.lengths.length}` : '길이') : null,
-      themes.length ? drop('theme', f.theme === 'all' ? '테마' : themeName(catalog.theme(f.theme))) : null);
+      themes.length ? drop('theme', f.theme === 'all' ? '테마' : themeName(catalog.theme(f.theme))) : null,
+    ].filter(Boolean)); // 해당 없는 칸(null)이 글자 'null'로 찍히지 않게
     const panel = $('#filter-panel');
     panel.hidden = !f.open;
     const toggleIn = (arr, v) => { const i = arr.indexOf(v); if (i < 0) arr.push(v); else arr.splice(i, 1); renderAll(true); };
@@ -2679,7 +2996,7 @@ DYS.makeFixtures = function makeFixtures(W, H) {
     $('#hair-colors').replaceChildren(...colors.map((c) => el('button', {
       class: `swatch${c.colorId === state.hairColor ? ' on' : ''}`,
       'aria-pressed': String(c.colorId === state.hairColor),
-      onclick: () => { state.hairColor = c.colorId; state.view = 'body'; renderAll(); },
+      onclick: () => { state.hairColor = c.colorId; state.view = 'face'; renderAll(); },
     }, el('span', { class: 'chip', style: `background:${c.hex}` }), el('span', {}, c.label))));
     // 미세 조절(원래 색일 때는 숨김)
     const sliders = [['brightness', '밝기'], ['saturation', '채도'], ['warmth', '차갑게 · 따뜻하게']];
@@ -2708,7 +3025,16 @@ DYS.makeFixtures = function makeFixtures(W, H) {
     const sc = catalog.scene(shoot.sceneId);
     $('#shoot-title').textContent = sc ? sc.label : '';
     const seg = (items, isOn, pick) => items.map(([v, label]) => el('button', { class: isOn(v) ? 'on' : '', 'aria-pressed': String(isOn(v)), onclick: () => { pick(v); renderAll(); } }, label));
-    $('#shoot-scenes').replaceChildren(...seg(shootScenes().map((s) => [s.sceneId, s.label]), (v) => v === shoot.sceneId, (v) => { shoot.sceneId = v; }));
+    const places = shootPlaces();
+    if (places.length && !places.some((p) => p.scenes.some((x) => x.sceneId === shoot.sceneId))) shoot.sceneId = places[0].scenes[0].sceneId;
+    const curPlace = sc ? placeOf(sc) : null;
+    $('#shoot-scenes').replaceChildren(...seg(places.map((p) => [p.place, p.place]), (v) => v === curPlace, (v) => { // 장소를 바꾸면 그 장소의 첫 변형
+      const p = places.find((q) => q.place === v); if (p) shoot.sceneId = p.scenes[0].sceneId;
+    }));
+    const cur = places.find((p) => p.place === curPlace);
+    const vars = cur && cur.scenes.length > 1 ? cur.scenes : [];
+    $('#shoot-variant-row').hidden = !vars.length;
+    $('#shoot-variants').replaceChildren(...seg(vars.map((x) => [x.sceneId, variantLabel(x, vars)]), (v) => v === shoot.sceneId, (v) => { shoot.sceneId = v; }));
     $('#shoot-framing').replaceChildren(...seg(FRAMINGS.map((f) => [f[0], f[1]]), (v) => v === shoot.framing, (v) => { shoot.framing = v; }));
     $('#shoot-pos').replaceChildren(...seg(POSITIONS, (v) => v === shoot.pos, (v) => { shoot.pos = v; }),
       el('button', { class: shoot.flip ? 'on' : '', 'aria-pressed': String(shoot.flip), onclick: () => { shoot.flip = !shoot.flip; renderAll(); } }, '↔ 반전'));
@@ -2783,7 +3109,6 @@ DYS.makeFixtures = function makeFixtures(W, H) {
     toast('사진을 내려받았어요');
   }
   $('#btn-save').addEventListener('click', savePhoto);
-  $('#btn-save-top').addEventListener('click', savePhoto);
 
   // 원화 겹쳐보기(?dev): 받은 그림을 무대 위에 반투명으로 얹어 정렬을 눈으로 확인(저장 사진에는 안 들어감)
   $('#overlay-file').addEventListener('change', async (ev) => {
