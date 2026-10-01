@@ -1,6 +1,6 @@
 // 서비스 워커: 한 번 본 그림·코드는 휴대폰에 저장해 두고(다시 열 때 빠르게, 인터넷이 약해도 열리게),
 // 새 버전을 올리면 VERSION이 바뀌어 옛 저장본을 지운다. VERSION은 빌드 때 자동으로 바뀐다.
-const VERSION = '20261001110147';
+const VERSION = '20261001111957';
 const CACHE = `dys-${VERSION}`;
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(['./', './index.html', './manifest.webmanifest'])).then(() => self.skipWaiting()));
